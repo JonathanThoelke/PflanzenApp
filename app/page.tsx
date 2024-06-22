@@ -1,10 +1,12 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
+      <header>Ich bin ein Header</header>
+      <nav></nav>
       <h1>Pflanzen-App</h1>
-      <p color="red">Starting</p>
+      <p>Test</p>
+      <aside></aside>
+      <footer>Ich bin ein Footer</footer>
     </main>
   );
 }
