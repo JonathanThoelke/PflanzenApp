@@ -15,18 +15,16 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        <header style={{backgroundColor: "#FDCA40", padding: "1rem"}}>
+        <header style={{backgroundColor: "#FDCA40"}}>
           <img src="/burger-menu-svgrepo-com.svg" style={{width: 50, height: 50}}></img>
-          <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/Shop">Shop</Link></li>
-            <li><Link href="/Pflanzen">Pflanzen</Link></li>
-          </ul>
-          <form>
-            <label>Suche:</label>
-            <input type="search"></input>
-            <input type="submit"></input>
-          </form>
+          <Link href={"/"}>Home</Link>
+          <Link href={"/Shop"}>Shop</Link>
+          <Link href={"/Kontakt"}>Kontakt</Link>
+          <Link href={"Impressum"}>Über Uns</Link>
+          <div style={{backgroundColor: "white", alignItems: "start", width: "150px", }}>
+            <input type="search" placeholder="Search" style={{width: 100, height: 17}}></input>
+            <img src={"/search-svgrepo-com.svg"} style={{width: 17, height: 17, display: "inline"}}></img>
+          </div>
           <Link href="/"><img src="/Logo.png" style={{width: 50, height: 50}}></img></Link>
         </header>
         <main>{ children }</main>

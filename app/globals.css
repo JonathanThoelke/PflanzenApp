@@ -2,11 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+li {
+  display: inline;
+  padding-right: 5px;
+}
+header > * {
+  display: inline;
+  padding-right: 5px;
+  font-size: 17px;
+}
+
+/*
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -31,3 +43,4 @@ body {
     text-wrap: balance;
   }
 }
+*/
