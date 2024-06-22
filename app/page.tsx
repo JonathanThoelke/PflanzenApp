@@ -1,11 +1,8 @@
 //Homepage
 export default function Home() {
   return (
-    <main>
-      <header>
-        <a href="/">Homepage</a>
-      </header>
-      <h1>Pflanzen-App</h1>
+    <div>
+      <h1>Pflanzen-App Homepage</h1>
       <div>
         <a href="/Suche">Suche</a>
       </div>
@@ -15,9 +12,6 @@ export default function Home() {
       <div>
         <a href="/Shop">Shop</a>
       </div>
-      <footer>
-        <a href="/Impressum">Impressum</a>
-      </footer>
-    </main>
+    </div>
   );
 }

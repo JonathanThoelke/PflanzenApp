@@ -6,15 +6,9 @@ export default function Plant({ params }: {
     }
 }) {
     return (
-      <main>
-        <header>
-          <a href="/">Homepage</a>
-        </header>
-        <h1>{ params.slug[0] }</h1>
-        <footer>
-          <a href="/Impressum">Impressum</a>
-        </footer>
-      </main>
+      <div>
+        <h1>Hier siehst du: { params.slug[0] }</h1>
+      </div>
     );
   }
   
