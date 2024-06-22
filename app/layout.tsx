@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="de">
       <body>
         <header style={{backgroundColor: "#FDCA40", padding: "1rem"}}>
-          <img src="/burger-menu-svgrepo-com.svg" style={{width: 50,height:50}}></img>
+          <img src="/burger-menu-svgrepo-com.svg" style={{width: 50, height: 50}}></img>
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/Shop">Shop</Link></li>
@@ -27,6 +27,7 @@ export default function RootLayout({
             <input type="search"></input>
             <input type="submit"></input>
           </form>
+          <Link href="/"><img src="/Logo.png" style={{width: 50, height: 50}}></img></Link>
         </header>
         <main>{ children }</main>
         <footer style={{backgroundColor: "#EEEEEE"}}>
