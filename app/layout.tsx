@@ -17,7 +17,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header><a href="/">Homepage</a></header>
+        <header>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Shop">Shop</a></li>
+            <li><a href="/Pflanzen">Pflanzen</a></li>
+            <li>
+              <form>
+                <label>Suche:</label>
+                <input type="search"></input>
+                <input type="submit"></input>
+              </form>
+            </li>
+          </ul>
+        </header>
         <main>{ children }</main>
         <footer><a href="/Impressum">Impressum</a></footer>
       </body>
