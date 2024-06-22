@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
+        <header style={{backgroundColor: "#FDCA40", padding: "1rem"}}>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/Shop">Shop</a></li>
@@ -32,7 +32,9 @@ export default function RootLayout({
           </ul>
         </header>
         <main>{ children }</main>
-        <footer><a href="/Impressum">Impressum</a></footer>
+        <footer style={{backgroundColor: "#EEEEEE"}}>
+          <a href="/Impressum">Impressum</a>
+        </footer>
       </body>
     </html>
   );
