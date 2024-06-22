@@ -2,12 +2,22 @@
 export default function Home() {
   return (
     <main>
-      <header>Ich bin ein Header</header>
-      <nav></nav>
+      <header>
+        <a href="/">Homepage</a>
+      </header>
       <h1>Pflanzen-App</h1>
-      <p>Test</p>
-      <aside></aside>
-      <footer>Ich bin ein Footer</footer>
+      <div>
+        <a href="/Suche">Suche</a>
+      </div>
+      <div>
+        <a href="/Pflanzen">Pflanzen</a>
+      </div>
+      <div>
+        <a href="/Shop">Shop</a>
+      </div>
+      <footer>
+        <a href="/Impressum">Impressum</a>
+      </footer>
     </main>
   );
 }

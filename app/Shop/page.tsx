@@ -2,9 +2,13 @@
 export default function Home() {
     return (
       <main>
-        <header>Ich bin ein Header</header>
+        <header>
+          <a href="/">Homepage</a>
+        </header>
         <h1>Shop</h1>
-        <footer>Ich bin ein Footer</footer>
+        <footer>
+          <a href="/Impressum">Impressum</a>
+        </footer>
       </main>
     );
 }

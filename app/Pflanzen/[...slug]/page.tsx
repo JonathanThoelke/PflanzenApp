@@ -7,9 +7,13 @@ export default function Plant({ params }: {
 }) {
     return (
       <main>
-        <header>Ich bin ein Header</header>
+        <header>
+          <a href="/">Homepage</a>
+        </header>
         <h1>{ params.slug[0] }</h1>
-        <footer>Ich bin ein Footer</footer>
+        <footer>
+          <a href="/Impressum">Impressum</a>
+        </footer>
       </main>
     );
   }
