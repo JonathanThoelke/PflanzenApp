@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 //Hier sollen alle Pflanzen mit nur wenigen Informationen aufgelistet werden
 export default function Plants()
 {
@@ -5,9 +7,9 @@ export default function Plants()
         <div>
             <h1>Hier werden alle Pflanzen aufgelistet</h1>
             <ul>
-                <li><a href="/Pflanzen/roteRose">rote Rose</a></li>
-                <li><a href="/Pflanzen/taupeTulpe">taupe Tulpe</a></li>
-                <li><a href="/Pflanzen/lilaLilie">lila Lilie</a></li>
+                <li><Link href="/Pflanzen/roteRose">rote Rose</Link></li>
+                <li><Link href="/Pflanzen/taupeTulpe">taupe Tulpe</Link></li>
+                <li><Link href="/Pflanzen/lilaLilie">lila Lilie</Link></li>
             </ul>
         </div>
     );

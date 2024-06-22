@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Pflanzen-App",
@@ -16,13 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={inter.className}>
+      <body>
         <header style={{backgroundColor: "#FDCA40", padding: "1rem"}}>
           <img src="/burger-menu-svgrepo-com.svg" style={{width: 50,height:50}}></img>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/Shop">Shop</a></li>
-            <li><a href="/Pflanzen">Pflanzen</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/Shop">Shop</Link></li>
+            <li><Link href="/Pflanzen">Pflanzen</Link></li>
           </ul>
           <form>
             <label>Suche:</label>
@@ -32,7 +30,7 @@ export default function RootLayout({
         </header>
         <main>{ children }</main>
         <footer style={{backgroundColor: "#EEEEEE"}}>
-          <a href="/Impressum">Impressum</a>
+          <Link href="/Impressum">Impressum</Link>
         </footer>
       </body>
     </html>
