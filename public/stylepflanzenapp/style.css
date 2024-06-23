@@ -193,4 +193,10 @@ footer{
 
 .smbtnsrc{
     color:white;
+    margin-left:10px;
+}
+
+
+.smbtnsrc a{
+    color: white;
 }
