@@ -15,19 +15,20 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        <header className="p-4 flex justify-between items-center" style={{ backgroundColor: "#FDCA40" }}>
-          <img src="/burger-menu-svgrepo-com.svg" className="w-12 h-12" alt="Menu" />
-          <nav className="flex gap-8">
-            <Link href="/">Home</Link>
-            <Link href="/Shop">Shop</Link>
-            <Link href="/Kontakt">Kontakt</Link>
-            <Link href="/Impressum">Über Uns</Link>
-          </nav>
+        <header className="p-4 flex items-center justify-between" style={{ backgroundColor: "#FDCA40" }}>
+          <div className="flex items-center">
+            <img src="/Logo.png" className="w-12 h-12" alt="Logo" />
+            <nav className="ml-4 flex gap-8">
+              <Link href="/">Home</Link>
+              <Link href="/Shop">Shop</Link>
+              <Link href="/Kontakt">Kontakt</Link>
+              <Link href="/Impressum">Über Uns</Link>
+            </nav>
+          </div>
           <div className="flex items-center bg-white p-2 rounded">
             <input type="search" placeholder="Search" className="w-24 h-4 p-1" />
             <img src="/search-svgrepo-com.svg" className="w-4 h-4 inline" alt="Search" />
           </div>
-          <Link href="/"><img src="/Logo.png" className="w-12 h-12" alt="Logo" /></Link>
         </header>
         <main>{children}</main>
         <footer className="bg-gray-200 p-4 text-center">
