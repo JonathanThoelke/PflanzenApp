@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name":"Rose",
+        "description":"rot"
+    },
+    {
+        "id":2,
+        "name":"Tulpen",
+        "description":"taupe"
+    },
+    {
+        "id":3,
+        "name":"Lilie",
+        "description":"lila"
+    }
+]
