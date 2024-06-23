@@ -39,7 +39,7 @@ export const FetchDataById: React.FunctionComponent<Props> = ({ id }) => {
 
   return (
     <>
-      {name ? <p>Name: {name}</p> : <p>Data not found</p>}
+      {name ? <p>Name: {name}</p> : null}
     </>
   );
 };

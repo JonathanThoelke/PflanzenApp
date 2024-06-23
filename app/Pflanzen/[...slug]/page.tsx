@@ -8,7 +8,7 @@ export default function Plant({ params }: {
         slug: string[];
     }
 }) {
-    if(params.slug.length === 1){ //Vorrübergehend zum Testen von notFound()
+    if(<FetchDataById id={parseInt(params.slug[0])}></FetchDataById> != null){ //Vorrübergehend zum Testen von notFound()
       return (
         <div>
           <h1>Hier siehst du: <FetchDataById id={ parseInt(params.slug[0]) }></FetchDataById></h1>
