@@ -1,0 +1,196 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 100vh;
+}
+
+.grid{
+    display:grid;
+    grid-template-areas: 'header''main''footer';
+    width:300px;
+    height:600px;
+    box-sizing: border-box;
+    grid-template-rows: 50px 1fr 100px;
+    background-color: white;
+}
+
+header{
+    grid-area: header;
+    background-color: #fdca40;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 'logo notlogo';
+    padding:0px;
+    width: 300px;
+}
+
+.menu{
+    margin-left:6px;
+}
+
+.logoimage{
+    grid-area: logo;
+    margin-left:4px;
+    width:70px;
+    height:50px;
+    padding: 0px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.logo{
+    margin: 0px;
+    width:25px;
+    height:50px;
+}
+
+.notlogo{
+    grid-area: notlogo;
+    margin:0px;
+    height:50px;
+    width:230px;
+    padding: 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+
+.home{
+    height:50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    margin-right:10px;
+}
+
+
+.sale{
+    height:50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    margin-right:10px;
+}
+
+
+
+.search{
+    height:50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    margin-right:10px;
+}
+
+
+.cart{
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    margin-right:10px;
+}
+
+main{
+    grid-area: main;
+    background-color: white;
+}
+
+footer{
+    grid-area:footer;
+    background-color: white;
+    border-top:1px solid grey;
+    margin:0 10px;
+    display:grid;
+    grid-template-columns: 2fr 3fr 4fr;
+    grid-template-areas: 'sm contact content';
+}
+.smlink{
+    grid-area: sm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'appname appname''fb in''yt gram';
+    padding: 0px;
+}
+
+
+
+.appname{
+    grid-area: appname;
+}
+
+.fb{
+    grid-area: fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.in{
+    grid-area: in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.yt{
+    grid-area: yt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gram{
+    grid-area: gram;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smlink p{
+    font-size: 8px;
+    margin-top:15px;
+    font-weight: bolder;
+}
+
+
+.contact{
+    grid-area: contact;
+    box-sizing: border-box;
+}
+
+.contact .kontakt{
+    margin-top: 25px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.contact p{
+    font-size: 8px;
+    font-weight:500;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+.content{
+    grid-area: content;
+}
+
+
+.smbtnsrc{
+    color:white;
+}
