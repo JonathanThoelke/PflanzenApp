@@ -1,51 +1,7 @@
-"use client"
-//Hier soll Anhand der Parameter in der URL eine Pflanze aus dem Datensatz rausgesucht werden
-
 import { notFound } from "next/navigation";
+import { FetchDataById } from "@/app/_lib/logic";
 
-import React, { useState, useEffect } from "react";
-
-const data = [
-    { id: 1, name: 'rote Rosen' },
-    { id: 2, name: 'taupe Tulpen' },
-    { id: 3, name: 'lila Lilien' }
-];
-type DataType = {
-    id: number;
-    name: string;
-};
-type Props = {
-    id: number;
-  };
-
-  const FetchDataById: React.FC<Props> = ({ id }) => {
-    const [name, setName] = useState<string | null>(null);
-  
-    useEffect(() => {
-      // Function to fetch data by ID
-      const fetchDataById = (id: number) => {
-        const foundData = data.find((item) => item.id === id);
-        if (foundData) {
-          setName(foundData.name);
-        } else {
-          setName(null);
-        }
-      };
-  
-      // Call the fetch function with the provided ID
-      fetchDataById(id);
-    }, [id]);
-  
-    return (
-      <div>
-        {name ? <p>Name: {name}</p> : <p>Data not found</p>}
-      </div>
-    );
-  };
-
-//<FetchDataById id={1}></FetchDataById>
-
-
+//Hier soll Anhand der Parameter in der URL eine Pflanze aus dem Datensatz rausgesucht werden
 //und sämtliche verfügbaren Informationen dargestellt werden
 export default function Plant({ params }: {
     params: {

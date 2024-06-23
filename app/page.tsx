@@ -1,4 +1,6 @@
 //Homepage
+import { FetchDataById } from "./_lib/logic"
+
 export default function Home() {
   return (
     <div>
