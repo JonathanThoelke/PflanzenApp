@@ -2,14 +2,16 @@
 //Zukünftig wird Data aus JSON-Datei ausgelesen statt als const deklariert
 "use client"
 import React, { useState, useEffect } from "react";
+import data from "@/data/data-test.json"
 
+/*
 const data = [
     { id: 1, name: 'rote Rosen', description: 'rot' },
     { id: 2, name: 'taupe Tulpen', description: 'braun' },
     { id: 3, name: 'lila Lilien', description: 'violet' },
     { id: 4, name: 'hellblaue Hortensien', description: 'blau' },
 ];
-
+/**/
 type DataType = {
     id: number;
     name: string;
