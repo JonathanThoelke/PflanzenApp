@@ -1,0 +1,135 @@
+[
+    {
+      "ID": 1,
+      "deutscherName": "Einblatt",
+      "lateinischerName": "Spathiphyllum wallisii",
+      "gattung": "Araceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 1,
+      "lichtbedarf": 2,
+      "wuchshöhe": 30,
+      "bluetezeit": [5, 6, 7]
+    },
+    {
+      "ID": 2,
+      "deutscherName": "Efeutute",
+      "lateinischerName": "Epipremnum aureum",
+      "gattung": "Araceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 1,
+      "lichtbedarf": 2,
+      "wuchshöhe": 200,
+      "bluetezeit": null
+    },
+    {
+      "ID": 3,
+      "deutscherName": "Monstera",
+      "lateinischerName": "Monstera deliciosa",
+      "gattung": "Araceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 1,
+      "lichtbedarf": 3,
+      "wuchshöhe": 300,
+      "bluetezeit": null
+    },
+    {
+      "ID": 4,
+      "deutscherName": "Gummibaum",
+      "lateinischerName": "Ficus elastica",
+      "gattung": "Moraceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 1,
+      "lichtbedarf": 2,
+      "wuchshöhe": 300,
+      "bluetezeit": null
+    },
+    {
+      "ID": 5,
+      "deutscherName": "Zimmerlinde",
+      "lateinischerName": "Sparmannia africana",
+      "gattung": "Tiliaceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 2,
+      "duengenProMonat": 2,
+      "lichtbedarf": 2,
+      "wuchshöhe": 150,
+      "bluetezeit": [4, 5, 6]
+    },
+    {
+      "ID": 6,
+      "deutscherName": "Zamioculcas",
+      "lateinischerName": "Zamioculcas zamiifolia",
+      "gattung": "Araceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 1,
+      "lichtbedarf": 1,
+      "wuchshöhe": 60,
+      "bluetezeit": null
+    },
+    {
+      "ID": 7,
+      "deutscherName": "Schwertfarn",
+      "lateinischerName": "Nephrolepis exaltata",
+      "gattung": "Lomariopsidaceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 2,
+      "duengenProMonat": 1,
+      "lichtbedarf": 2,
+      "wuchshöhe": 100,
+      "bluetezeit": null
+    },
+    {
+      "ID": 8,
+      "deutscherName": "Kaktus",
+      "lateinischerName": "Cactaceae",
+      "gattung": "Cactaceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 0.5,
+      "duengenProMonat": 0,
+      "lichtbedarf": 1,
+      "wuchshöhe": 50,
+      "bluetezeit": [5, 6, 7]
+    },
+    {
+      "ID": 9,
+      "deutscherName": "Orchidee",
+      "lateinischerName": "Orchidaceae",
+      "gattung": "Orchidaceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 0.5,
+      "lichtbedarf": 3,
+      "wuchshöhe": 30,
+      "bluetezeit": [1, 2, 3, 4, 10, 11, 12]
+    },
+    {
+      "ID": 10,
+      "deutscherName": "Pfennigbaum",
+      "lateinischerName": "Crassula ovata",
+      "gattung": "Crassulaceae",
+      "haustiergeeigent": true,
+      "gießenProWoche": 1,
+      "duengenProMonat": 1,
+      "lichtbedarf": 2,
+      "wuchshöhe": 150,
+      "bluetezeit": [1, 2]
+    },
+    {
+        "ID": 11,
+        "deutscherName": "Dieffenbachie",
+        "lateinischerName": "Dieffenbachia seguine",
+        "gattung": "Araceae",
+        "haustiergeeigent": false,
+        "gießenProWoche": 1,
+        "duengenProMonat": 1,
+        "lichtbedarf": 2,
+        "wuchshöhe": 150,
+        "bluetezeit": null
+      }      
+  ]
+  
