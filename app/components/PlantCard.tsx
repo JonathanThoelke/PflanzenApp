@@ -1,5 +1,8 @@
 // PlantCard.tsx
 
+import AddToCart from "./AddToCart";
+
+
 interface Plant {
     id: number;
     name: string;
@@ -20,9 +23,7 @@ interface Plant {
           <p className="text-gray-700 text-base">€{plant.price.toFixed(2)}</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Zum Warenkorb hinzufügen
-          </button>
+            <AddToCart />
         </div>
       </div>
     );
