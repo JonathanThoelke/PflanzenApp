@@ -1,15 +1,19 @@
+import PlantCard from "../components/PlantCard";
+
 //Hier soll ein Shop implementiert werden
 export default function Home() {
     return (
       <div>
         <h1>Hier ist der Shop</h1>
+        <PlantCard />
       </div>
     );
 }
 
-// Im folgenden Code gibt es noch ein Problem, daher auskommentiert
 
- /*
+// Im folgenden Code gibt es noch ein Problem, daher auskommentiert
+/*
+ 
 import { useEffect, useState } from "react";
 import plantsData from "../../data/plants.json";
 import PlantCard from "../components/PlantCard";
