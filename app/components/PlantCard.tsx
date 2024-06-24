@@ -1,4 +1,6 @@
 // PlantCard.tsx
+
+
 import AddToCart from "./AddToCart";
 
 
@@ -11,36 +13,44 @@ const PlantCard = () => {
 }
 
 export default PlantCard
-
 /*
+
 import AddToCart from "./AddToCart";
 
-
 interface Plant {
-    id: number;
-    name: string;
-    image: string;
-    price: number;
-  }  
-  
-  interface PlantCardProps {
-    plant: Plant;
-  }
-  
-  const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
-    return (
-      <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
-        <img className="w-full" src={plant.image} alt={plant.name} />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{plant.name}</div>
-          <p className="text-gray-700 text-base">€{plant.price.toFixed(2)}</p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-            <AddToCart />
-        </div>
+  ID: number;
+  deutscherName: string;
+  lateinischerName: string;
+  gattung: string;
+  haustiergeeigent: boolean;
+  gießenProWoche: number;
+  duengenProMonat: number;
+  lichtbedarf: number;
+  wuchshöhe: number;
+  bluetezeit: number[] | null;
+  preis: string;
+  imagePath: string;
+}
+
+interface PlantCardProps {
+  plant: Plant;
+}
+
+const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
+  return (
+    <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
+      <img className="w-full" src={plant.imagePath} alt={plant.deutscherName} />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{plant.deutscherName}</div>
+        <p className="text-gray-700 text-base">{plant.lateinischerName}</p>
+        <p className="text-gray-700 text-base">€{plant.preis}</p>
       </div>
-    );
-  };
-  
-  export default PlantCard;
+      <div className="px-6 pt-4 pb-2">
+        <AddToCart />
+      </div>
+    </div>
+  );
+};
+
+export default PlantCard;
 */
