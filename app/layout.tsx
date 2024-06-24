@@ -22,7 +22,7 @@ export default function RootLayout({
               <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
               <Link href="/Kontakt">Kontakt</Link>
-              <Link href="/Impressum">Über Uns</Link>
+              <Link href="/Ueber Uns">Über Uns</Link>
             </nav>
           </div>
           <div className="flex items-center bg-white p-2 rounded">
