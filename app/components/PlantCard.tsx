@@ -1,5 +1,18 @@
 // PlantCard.tsx
+import AddToCart from "./AddToCart";
 
+
+const PlantCard = () => {
+  return (
+    <div>
+      <AddToCart />
+    </div>
+  )
+}
+
+export default PlantCard
+
+/*
 import AddToCart from "./AddToCart";
 
 
@@ -30,4 +43,4 @@ interface Plant {
   };
   
   export default PlantCard;
-  
+*/
