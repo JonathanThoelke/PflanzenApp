@@ -2,7 +2,9 @@
 //Zukünftig wird Data aus JSON-Datei ausgelesen statt als const deklariert
 "use client"
 import React, { useState, useEffect } from "react";
-import data from "@/data/data-test.json"
+//import data from "@/data/data-test.json"
+import data from "@/data/plants.json"
+
 
 /*
 const data = [
@@ -27,9 +29,9 @@ export const FetchDataById: React.FunctionComponent<Props> = ({ id }) => {
   useEffect(() => {
     // Function to fetch data by ID
     const fetchDataById = (id: number) => {
-      const foundData = data.find((item) => item.id === id);
+      const foundData = data.find((item) => item.ID === id);
       if (foundData) {
-        setName(foundData.name);
+        setName(foundData.deutscherName);
       } else {
         setName(null);
       }
