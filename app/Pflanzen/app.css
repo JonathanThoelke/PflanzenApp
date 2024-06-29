@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ffc107;
+    padding: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+    display: inline;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .plant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .plant-item {
+    background: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .plant-item img {
+    max-width: 100px;
+  }
+  
+  .plant-detail {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .plant-detail img {
+    max-width: 300px;
+  }
+  
