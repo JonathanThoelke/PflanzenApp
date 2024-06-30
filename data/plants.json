@@ -11,7 +11,7 @@
     "wuchshöhe": 80,
     "bluetezeit": [6, 7, 8],
     "preis": "3,49€",
-    "imagePath": "/images/sonnenhut.jpg"
+    "imagePath": "/images/sonnenhut.png"
   },
   {
     "ID": 13,
@@ -25,7 +25,7 @@
     "wuchshöhe": 100,
     "bluetezeit": [7, 8, 9],
     "preis": "4,99€",
-    "imagePath": "/images/dahlien.jpg"
+    "imagePath": "/images/dahlien.png"
   },
   {
     "ID": 14,
@@ -39,7 +39,7 @@
     "wuchshöhe": 60,
     "bluetezeit": [6, 7, 8],
     "preis": "3,99€",
-    "imagePath": "/images/sonnenhut_gelb.jpg"
+    "imagePath": "/images/sonnenhut_gelb.png"
   },
   {
     "ID": 15,
@@ -53,7 +53,7 @@
     "wuchshöhe": 40,
     "bluetezeit": [6, 7, 8],
     "preis": "2,49€",
-    "imagePath": "/images/basilikum.jpg"
+    "imagePath": "/images/basilikum.png"
   },
   {
     "ID": 16,
@@ -67,7 +67,7 @@
     "wuchshöhe": 50,
     "bluetezeit": [6, 7, 8],
     "preis": "3,99€",
-    "imagePath": "/images/paprika.jpg"
+    "imagePath": "/images/paprika.png"
   },
   {
     "ID": 17,
@@ -81,7 +81,7 @@
     "wuchshöhe": 300,
     "bluetezeit": [5, 6],
     "preis": "5,99€",
-    "imagePath": "/images/kiwi.jpg"
+    "imagePath": "/images/kiwi.png"
   },
   {
     "ID": 18,
@@ -95,6 +95,6 @@
     "wuchshöhe": 60,
     "bluetezeit": [6, 7, 8],
     "preis": "3,49€",
-    "imagePath": "/images/spitzpaprika.jpg"
+    "imagePath": "/images/paprika_gruen.png"
   }
 ]
