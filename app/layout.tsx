@@ -18,7 +18,7 @@ export default function RootLayout({
         <header className="p-4 flex items-center justify-between" style={{ backgroundColor: "#FDCA40" }}>
           <div className="flex items-center">
             <nav className="ml-8 flex gap-8">
-              <Link href="/"> <img src="/Logo.png" className="w-12 h-12 fixed left-4 top-2" alt="Logo" /> </Link>
+              <Link href="/"> <img src="/Logo.png" className="w-12 h-12 absolute left-4 top-2" alt="Logo" /> </Link>
               <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
               <Link href="/Kontakt">Kontakt</Link>
