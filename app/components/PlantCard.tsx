@@ -1,20 +1,3 @@
-// PlantCard.tsx
-
-
-import AddToCart from "./AddToCart";
-
-
-const PlantCard = () => {
-  return (
-    <div>
-      <AddToCart />
-    </div>
-  )
-}
-
-export default PlantCard
-/*
-
 import AddToCart from "./AddToCart";
 
 interface Plant {
@@ -53,4 +36,3 @@ const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
 };
 
 export default PlantCard;
-*/
