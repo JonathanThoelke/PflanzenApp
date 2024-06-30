@@ -55,8 +55,10 @@ const Kontaktformular = () => {
                 <label>Themenbereich</label>
                 <select name="topic" value={formData.topic} onChange={handleChange}>
                     <option value="">Wählen Sie einen Bereich</option>
-                    <option value="topic1">Themenbereich 1</option>
-                    <option value="topic2">Themenbereich 2</option>
+                    <option value="topic1">Allgemeine Fragen</option>
+                    <option value="topic2">Pflegehinweise</option>
+                    <option value="topic3">Bestellungen und Lieferungen</option>
+                    <option value="topic4">Rückgabe und Umtausch</option>
                 </select>
             </div>
             <div>
