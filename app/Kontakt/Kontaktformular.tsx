@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Link from "next/link";
-import type { Metadata } from "next";
 
 const Kontaktformular = () => {
     const [formData, setFormData] = useState({
@@ -14,12 +12,12 @@ const Kontaktformular = () => {
         message: '',
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         // Handle form submission logic here
         console.log('Form submitted:', formData);
