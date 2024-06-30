@@ -1,8 +1,8 @@
-import Kontaktformular from './Kontaktformular';
+import Kontaktformular from './Kontaktformular.tsx';
+
 const page = () => {
     return (
-        <div><h1>Hier ist die Kontaktseite</h1></div>
-        
+        <div><h1>Hier ist die Kontaktseite</h1> <Kontaktformular/> </div>
     )
 }
 
