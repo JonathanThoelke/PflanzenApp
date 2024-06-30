@@ -21,7 +21,7 @@ interface PlantCardProps {
 
 const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
+    <div className="rounded overflow-hidden shadow-lg m-4 bg-white w-full">
       <img className="w-full object-cover h-48" src={plant.imagePath} alt={plant.deutscherName} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{plant.deutscherName}</div>
