@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         customGreen: '#90ad97',
+        'customGreen-hover': '#c4d4c8',
       },
     },
   },
