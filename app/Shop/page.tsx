@@ -1,18 +1,4 @@
-import PlantCard from "../components/PlantCard";
-
-//Hier soll ein Shop implementiert werden
-export default function Home() {
-    return (
-      <div>
-        <h1>Hier ist der Shop</h1>
-        <PlantCard />
-      </div>
-    );
-}
-
-
-// Im folgenden Code gibt es noch ein Problem, daher auskommentiert
-/*
+'use client';
  
 import { useEffect, useState } from "react";
 import plantsData from "../../data/plants.json";
@@ -34,7 +20,7 @@ interface Plant {
 }
 
 export default function Shop() {
-  const [plants, setPlants] = useState([]);
+  const [plants, setPlants] = useState<Plant[]>([]);
 
   useEffect(() => {
     // Simuliere das Laden der Daten (hier aus einer JSON-Datei)
@@ -52,5 +38,3 @@ export default function Shop() {
     </div>
   );
 }
-
-*/
