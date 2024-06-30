@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from "next/link";
+import type { Metadata } from "next";
 
 const Kontaktformular = () => {
     const [formData, setFormData] = useState({
