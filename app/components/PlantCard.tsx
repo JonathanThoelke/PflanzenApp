@@ -28,7 +28,7 @@ const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
         <p className="text-gray-700 text-base">{plant.lateinischerName}</p>
         <p className="text-gray-700 text-base">€{plant.preis}</p>
       </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="px-6 pt-4 pb-4">
         <AddToCart />
       </div>
     </div>
