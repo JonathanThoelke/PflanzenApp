@@ -11,7 +11,7 @@
       "wuchshöhe": 30,
       "bluetezeit": [5, 6, 7],
       "preis": "9,99€",
-      "imagePath": "./images/apfel.jpg"
+      "imagePath": "/images/apfel.jpg"
     },
     {
       "ID": 2,
@@ -25,7 +25,7 @@
       "wuchshöhe": 200,
       "bluetezeit": null,
       "preis": "14,99€",
-      "imagePath": "./images/rose.jpg"
+      "imagePath": "/images/rose.jpg"
     },
     {
       "ID": 3,
@@ -39,7 +39,7 @@
       "wuchshöhe": 300,
       "bluetezeit": null,
       "preis": "19,99€",
-      "imagePath": "./images/apfel.jpg"
+      "imagePath": "/images/apfel.jpg"
     },
     {
       "ID": 4,
@@ -53,7 +53,7 @@
       "wuchshöhe": 300,
       "bluetezeit": null,
       "preis": "24,99€",
-      "imagePath": "./images/apfel.jpg"
+      "imagePath": "/images/apfel.jpg"
     },
     {
       "ID": 5,
@@ -67,7 +67,7 @@
       "wuchshöhe": 150,
       "bluetezeit": [4, 5, 6],
       "preis": "17,99€",
-      "imagePath": "./images/rose.jpg"
+      "imagePath": "/images/rose.jpg"
     },
     {
       "ID": 6,
@@ -81,7 +81,7 @@
       "wuchshöhe": 60,
       "bluetezeit": null,
       "preis": "12,99€",
-      "imagePath": "./images/apfel.jpg"
+      "imagePath": "/images/apfel.jpg"
     },
     {
       "ID": 7,
@@ -95,7 +95,7 @@
       "wuchshöhe": 100,
       "bluetezeit": null,
       "preis": "11,99€",
-      "imagePath": "./images/rose.jpg"
+      "imagePath": "/images/rose.jpg"
     },
     {
       "ID": 8,
@@ -109,7 +109,7 @@
       "wuchshöhe": 50,
       "bluetezeit": [5, 6, 7],
       "preis": "8,99€",
-      "imagePath": "./images/apfel.jpg"
+      "imagePath": "/images/apfel.jpg"
     },
     {
       "ID": 9,
@@ -123,7 +123,7 @@
       "wuchshöhe": 30,
       "bluetezeit": [1, 2, 3, 4, 10, 11, 12],
       "preis": "29,99€",
-      "imagePath": "./images/rose.jpg"
+      "imagePath": "/images/rose.jpg"
     },
     {
       "ID": 10,
@@ -137,7 +137,7 @@
       "wuchshöhe": 150,
       "bluetezeit": [1, 2],
       "preis": "13,99€",
-      "imagePath": "./images/apfel.jpg"
+      "imagePath": "/images/apfel.jpg"
     },
     {
       "ID": 11,
@@ -151,7 +151,7 @@
       "wuchshöhe": 150,
       "bluetezeit": null,
       "preis": "9,99€",
-      "imagePath": "./images/arose.jpg"
+      "imagePath": "/images/arose.jpg"
     }
   ]
   

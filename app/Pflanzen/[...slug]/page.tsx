@@ -1,23 +1,46 @@
-import { notFound } from "next/navigation";
-import { FetchDataById } from "@/app/_lib/logic";
+"use client"
 
-//Hier soll Anhand der Parameter in der URL eine Pflanze aus dem Datensatz rausgesucht werden
-//und sämtliche verfügbaren Informationen dargestellt werden
+import { useEffect, useState } from "react";
+import { notFound } from "next/navigation";
+import PlantCardDetailed from "@/app/components/PlantCardDetailed";
+import plantsData from "../../../data/plants.json";
+
+interface Plant {
+  ID: number;
+  deutscherName: string;
+  lateinischerName: string;
+  gattung: string;
+  haustiergeeigent: boolean;
+  gießenProWoche: number;
+  duengenProMonat: number;
+  lichtbedarf: number;
+  wuchshöhe: number;
+  bluetezeit: number[] | null;
+  preis: string;
+  imagePath: string;
+}
+
 export default function Plant({ params }: {
-    params: {
-        slug: string[];
-    }
-}) {
-    if(<FetchDataById id={parseInt(params.slug[0])}></FetchDataById> != null){ //Vorrübergehend zum Testen von notFound()
-      return (
-        <div>
-          <h1>Hier siehst du: <FetchDataById id={ parseInt(params.slug[0]) }></FetchDataById></h1>
-        </div>
-      );  //In Zukunft sollen mittels useState, anhand der parameter, Daten aus dem Datensatz gezogen
-          //werden. Nicht-existierende Daten-Objekte sollen nach not-found umgeleitet werden.
-    }
-    else{
-      notFound();
-    }
+  params: {
+    slug: string[];
   }
+}) {
+  const [plant, setPlant] = useState<Plant>();
+
+  useEffect(() => {
+    // Simuliere das Laden der Daten (hier aus einer JSON-Datei)
+    setPlant(plantsData.find((item) => item.ID === parseInt(params.slug[0])));
+  }, []);
+
+  if(plant != null)
+  {
+    return (
+      <PlantCardDetailed key={plant.ID} plant={plant} />
+    )
+  }
+  else 
+  {
+    return notFound
+  }
+}
   
