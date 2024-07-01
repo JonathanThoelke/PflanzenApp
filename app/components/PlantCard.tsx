@@ -26,7 +26,7 @@ const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{plant.deutscherName}</div>
         <p className="text-gray-700 text-base">{plant.lateinischerName}</p>
-        <p className="text-gray-700 text-base">€{plant.preis}</p>
+        <p className="text-gray-700 text-base">{plant.preis}</p>
       </div>
       <div className="px-6 pt-4 pb-4">
         <AddToCart />
