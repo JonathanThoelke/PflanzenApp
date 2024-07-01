@@ -1,6 +1,6 @@
 [
   {
-    "ID": 12,
+    "ID": 1,
     "deutscherName": "Sonnenhut",
     "lateinischerName": "Echinacea purpurea",
     "gattung": "Asteraceae",
@@ -11,10 +11,11 @@
     "wuchshöhe": 80,
     "bluetezeit": [6, 7, 8],
     "preis": "3,49€",
-    "imagePath": "/images/sonnenhut.png"
+    "imagePath": "/images/sonnenhut.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   },
   {
-    "ID": 13,
+    "ID": 2,
     "deutscherName": "Dahlien",
     "lateinischerName": "Dahlia",
     "gattung": "Asteraceae",
@@ -25,10 +26,11 @@
     "wuchshöhe": 100,
     "bluetezeit": [7, 8, 9],
     "preis": "4,99€",
-    "imagePath": "/images/dahlien.png"
+    "imagePath": "/images/dahlien.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   },
   {
-    "ID": 14,
+    "ID": 3,
     "deutscherName": "Sonnenhut gelb",
     "lateinischerName": "Rudbeckia hirta",
     "gattung": "Asteraceae",
@@ -39,10 +41,11 @@
     "wuchshöhe": 60,
     "bluetezeit": [6, 7, 8],
     "preis": "3,99€",
-    "imagePath": "/images/sonnenhut_gelb.png"
+    "imagePath": "/images/sonnenhut_gelb.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   },
   {
-    "ID": 15,
+    "ID": 4,
     "deutscherName": "Basilikum",
     "lateinischerName": "Ocimum basilicum",
     "gattung": "Lamiaceae",
@@ -53,10 +56,11 @@
     "wuchshöhe": 40,
     "bluetezeit": [6, 7, 8],
     "preis": "2,49€",
-    "imagePath": "/images/basilikum.png"
+    "imagePath": "/images/basilikum.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   },
   {
-    "ID": 16,
+    "ID": 5,
     "deutscherName": "Paprika",
     "lateinischerName": "Capsicum annuum",
     "gattung": "Solanaceae",
@@ -67,10 +71,11 @@
     "wuchshöhe": 50,
     "bluetezeit": [6, 7, 8],
     "preis": "3,99€",
-    "imagePath": "/images/paprika.png"
+    "imagePath": "/images/paprika.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   },
   {
-    "ID": 17,
+    "ID": 6,
     "deutscherName": "Kiwi",
     "lateinischerName": "Actinidia deliciosa",
     "gattung": "Actinidiaceae",
@@ -81,10 +86,11 @@
     "wuchshöhe": 300,
     "bluetezeit": [5, 6],
     "preis": "5,99€",
-    "imagePath": "/images/kiwi.png"
+    "imagePath": "/images/kiwi.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   },
   {
-    "ID": 18,
+    "ID": 7,
     "deutscherName": "Spitzpaprika",
     "lateinischerName": "Capsicum annuum var. longum",
     "gattung": "Solanaceae",
@@ -95,6 +101,7 @@
     "wuchshöhe": 60,
     "bluetezeit": [6, 7, 8],
     "preis": "3,49€",
-    "imagePath": "/images/paprika_gruen.png"
+    "imagePath": "/images/paprika_gruen.png",
+    "beschreibung": "Basilikum ist ein aromatisches, einjähriges Kraut, das in keiner Küche fehlen darf. Mit seinen leuchtend grünen Blättern und dem unverwechselbaren Duft verleiht es zahlreichen Gerichten einen besonderen Geschmack. Ideal für den Anbau im Garten, auf dem Balkon oder auf der Fensterbank.\nEigenschaften:\n- Wuchshöhe: 20-60 cm\n- Blütezeit: Juni bis September\n- Standort: Sonnig, windgeschützt\n- Boden: Gut durchlässiger, nährstoffreicher Boden\n- Pflege: Regelmäßiges Gießen, Staunässe vermeiden\nVorteile:\n- Aromatisch und vielseitig: Perfekt für die mediterrane Küche, Pesto, Salate und mehr.\n- Gesundheitsfördernd: Enthält Vitamine und Mineralstoffe, die das Immunsystem unterstützen.\n- Pflegeleicht: Schnell wachsend und einfach zu kultivieren.\n- Frisch und verfügbar: Direkter Zugriff auf frische Blätter in der Küche.\n- Dekorativ: Attraktive grüne Blätter, die auch optisch überzeugen.\nPflegetipps:\n- Regelmäßiges Ernten fördert buschiges Wachstum und verhindert die Blütenbildung.\n- In Töpfen oder Pflanzgefäßen mit guter Drainage anbauen, um Wurzelfäule zu vermeiden.\n- Bei starkem Sonnenlicht und hohen Temperaturen häufiger gießen.\n- Vor Frost schützen und idealerweise drinnen überwintern.\nMit Basilikum holen Sie sich nicht nur ein unverzichtbares Gewürz in Ihre Küche, sondern auch eine pflegeleichte und dekorative Pflanze. Genießen Sie den frischen Geschmack und die vielseitigen Anwendungsmöglichkeiten dieses beliebten Krauts!"
   }
 ]

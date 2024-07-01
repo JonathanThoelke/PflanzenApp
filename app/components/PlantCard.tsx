@@ -38,3 +38,33 @@ const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
 };
 
 export default PlantCard;
+
+/*
+interface PlantCardProps {
+  plant: Plant;
+  onClick: (plant: Plant) => void;
+}
+
+const PlantCard: React.FC<PlantCardProps> = ({ plant, onClick }) => {
+  const handleClick = () => {
+    onClick(plant);
+  };
+
+const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
+  return (
+    <div className="rounded overflow-hidden shadow-lg m-4 bg-white w-full">
+      <img className="w-full object-cover h-48" src={plant.imagePath} alt={plant.deutscherName} />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{plant.deutscherName}</div>
+        <p className="text-gray-700 text-base">{plant.lateinischerName}</p>
+        <p className="text-gray-700 text-base">{plant.preis}</p>
+      </div>
+      <div className="px-6 pt-4 pb-4">
+        <AddToCart />
+      </div>
+    </div>
+  );
+};
+
+export default PlantCard;
+*/
