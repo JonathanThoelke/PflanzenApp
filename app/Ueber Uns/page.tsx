@@ -4,6 +4,9 @@ export default function Home() {
     return (
       <div>
         <h1>Hier ist Über uns</h1>
-      </div>
+        <p></p>
+        <h2></h2>
+        <p></p>
+ </div>
     );
 }
