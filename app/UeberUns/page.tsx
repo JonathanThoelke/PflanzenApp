@@ -5,7 +5,7 @@
 const Page = () => {
   return (
     <div>
-      <h1>Hier ist die Über uns Seite</h1>
+      <b>Über uns</b>
       <p>Willkommen in unserer Gartenapp!</p>
       <p>
         Wir freuen uns, dass Sie den Weg zu uns gefunden haben und
