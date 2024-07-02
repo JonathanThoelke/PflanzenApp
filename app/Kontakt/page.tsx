@@ -2,7 +2,7 @@ import Kontaktformular from './Kontaktformular.tsx';
 
 const page = () => {
     return (
-        <div><h1>Hier ist die Kontaktseite</h1> <Kontaktformular/> </div>
+        <div><b>Hier ist die Kontaktseite</b> <Kontaktformular/> </div>
     )
 }
 
