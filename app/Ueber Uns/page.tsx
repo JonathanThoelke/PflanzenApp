@@ -4,7 +4,7 @@ export default function Home() {
     return (
       <div>
         <h1>Hier ist Über uns</h1>
-        <a href="pflanzenapp/public/images/rose.jpg"></a>
+        <img src="/pflanzenapp/public/images/rose.jpg" alt="Rose" />
         <p></p>
         <h2></h2>
         <p></p>
