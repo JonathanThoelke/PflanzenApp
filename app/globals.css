@@ -22,7 +22,6 @@ main {
   flex-grow: 1;
 }
 
-
 /*
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -55,3 +54,25 @@ body {
   }
 }
 */
+
+.parentwelcome {
+  background-image: url("/images/dxhlien.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 70vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 4fr 3fr 4fr;
+  grid-template-areas: "above" "mid" "under";
+}
+
+.ueberunswillkommen {
+  background-color: white;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: mid;
+}
