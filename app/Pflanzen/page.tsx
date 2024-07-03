@@ -20,7 +20,7 @@ interface Plant {
   beschreibung: string;
 }
 
-export default function Detailansicht() {
+export default function Pflanzen() {
   const [plants, setPlants] = useState<Plant[]>([]);
 
   useEffect(() => {
