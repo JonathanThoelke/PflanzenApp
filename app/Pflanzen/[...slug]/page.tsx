@@ -18,6 +18,7 @@ interface Plant {
   bluetezeit: number[] | null;
   preis: string;
   imagePath: string;
+  beschreibung: string;
 }
 
 export default function Plant({ params }: {

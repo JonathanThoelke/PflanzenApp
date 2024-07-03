@@ -2,7 +2,7 @@
  
 import { useEffect, useState } from "react";
 import plantsData from "../../data/plants.json";
-import PlantDetails from "../components/PlantDetails";
+import PlantDetails from "../components/PlantCardDetailed";
 
 interface Plant {
   ID: number;

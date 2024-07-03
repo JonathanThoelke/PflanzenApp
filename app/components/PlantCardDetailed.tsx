@@ -13,6 +13,7 @@ interface Plant {
   bluetezeit: number[] | null;
   preis: string;
   imagePath: string;
+  beschreibung: string;
 }
 
 interface PlantCardProps {
@@ -26,7 +27,7 @@ const PlantCardDetailed: React.FC<PlantCardProps> = ({ plant }) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{plant.deutscherName}</div>
         <p className="text-gray-700 text-base">{plant.lateinischerName}</p>
-        <p className="text-gray-700 text-base">{plant.preis}</p>
+        <p className="text-gray-700 text-base">{plant.beschreibung}</p>
       </div>
       <div className="px-6 pt-4 pb-2">
       </div>
