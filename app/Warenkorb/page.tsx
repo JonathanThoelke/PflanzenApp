@@ -2,8 +2,6 @@
 
 'use client';
 
-
-/*
 export default function Home() {
     return (
         <div className="flex justify-center items-center h-screen">
@@ -16,6 +14,8 @@ export default function Home() {
         </div>
     );
 }
+
+/*
 
 interface Plant {
   ID: number;
