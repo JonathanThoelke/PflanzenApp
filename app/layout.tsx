@@ -25,9 +25,14 @@ export default function RootLayout({
               <Link href="/UeberUns">Über Uns</Link>
             </nav>
           </div>
-          <div className="flex items-center bg-white p-2 rounded">
-            <input type="search" placeholder="Search" className="w-24 h-4 p-1" />
-            <img src="/search-svgrepo-com.svg" className="w-4 h-4 inline" alt="Search" />
+          <div className="flex items-center gap-4">
+            <div className="flex items-center bg-white p-3" style={{ height: '2.3rem' }}>
+              <input type="search" placeholder="Search" className="w-24 h-4 p-1" />
+              <img src="/search-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="Search" />
+            </div>
+            <div className="flex items-center bg-black p-3 text-white" style={{ borderRadius: '8px', height: '2.3rem' }}>
+              <Link href="/Warenkorb">Warenkorb</Link>
+            </div>
           </div>
         </header>
         <main className="flex-grow">{children}</main>
