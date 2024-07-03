@@ -6,6 +6,7 @@ const Page = () => {
   return (
     <div>
       <b>Über uns</b>
+      <a href="pflanzenapp/public/images/rose.jpg"></a>
       <p>Willkommen in unserer Gartenapp!</p>
       <p>
         Wir freuen uns, dass Sie den Weg zu uns gefunden haben und
