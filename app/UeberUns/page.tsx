@@ -24,7 +24,7 @@ const Page = () => {
           style={{ gridArea: "under", backgroundColor: "black", opacity: 0.6 }}
         ></div>
       </div>
-      <h2 style={{ textAlign: "center", fontWeight: "bold", fontSize: "23px" }}>
+      <h2 style={{fontWeight: "bold", fontSize: "23px" }}>
         Unsere Geschichte
       </h2>
       <p>
@@ -36,7 +36,7 @@ const Page = () => {
         für Qualität treiben uns jeden Tag an, das Beste für unsere Kunden zu
         bieten.
       </p>
-      <h2 style={{ textAlign: "center", fontWeight: "bold", fontSize: "23px" }}>
+      <h2 style={{fontWeight: "bold", fontSize: "23px" }}>
         Unser Sortiment
       </h2>
       <p>
@@ -45,7 +45,7 @@ const Page = () => {
         Ihnen eine vielfältige Produktpalette. Unser Ziel ist es, Ihren Garten
         in eine grüne Oase der Ruhe und Schönheit zu verwandeln.
       </p>
-      <h2 style={{ textAlign: "center", fontWeight: "bold", fontSize: "23px" }}>
+      <h2 style={{fontWeight: "bold", fontSize: "23px" }}>
         Unser Service
       </h2>
       <p>
@@ -55,7 +55,7 @@ const Page = () => {
         sind immer für Sie da. Wir legen großen Wert auf persönlichen Service
         und Kundenzufriedenheit.
       </p>
-      <h2 style={{ textAlign: "center", fontWeight: "bold", fontSize: "23px" }}>
+      <h2 style={{fontWeight: "bold", fontSize: "23px" }}>
         Nachhaltigkeit
       </h2>
       <p>
@@ -65,7 +65,7 @@ const Page = () => {
         bis hin zu recycelbaren Verpackungen - wir bemühen uns, unseren
         ökologischen Fußabdruck so klein wie möglich zu halten.
       </p>
-      <h2 style={{ textAlign: "center", fontWeight: "bold", fontSize: "23px" }}>
+      <h2 style={{fontWeight: "bold", fontSize: "23px" }}>
         Unsere Vision
       </h2>
       <p>
