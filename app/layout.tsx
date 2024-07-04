@@ -15,22 +15,45 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className="flex flex-col min-h-screen">
-        <header className="p-4 flex items-center justify-between" style={{ backgroundColor: "#FDCA40" }}>
-          <div className="flex items-center">
-            <nav className="ml-8 flex gap-8">
-              <Link href="/"> <img src="/Logo.png" className="w-12 h-12 absolute left-4 top-2" alt="Logo" /> </Link>
+        <header
+          className="p-4 flex flex-col md:flex-row items-center justify-between"
+          style={{ backgroundColor: "#FDCA40" }}
+        >
+          <div className="flex items-center w-full md:w-auto">
+            <Link href="/">
+              <img
+                src="/Logo.png"
+                className="w-12 h-12 absolute left-4 top-2"
+                alt="Logo"
+              />
+            </Link>
+            <nav className="ml-20 flex gap-8">
               <Link href="/">Home</Link>
               <Link href="/Shop">Shop</Link>
               <Link href="/Kontakt">Kontakt</Link>
               <Link href="/UeberUns">Über Uns</Link>
             </nav>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center bg-white p-3" style={{ height: '2.3rem' }}>
-              <input type="search" placeholder="Search" className="w-24 h-4 p-1" />
-              <img src="/search-svgrepo-com.svg" className="w-4 h-4 ml-2" alt="Search" />
+          <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto">
+            <div
+              className="flex items-center bg-white p-3"
+              style={{ height: "2.3rem" }}
+            >
+              <input
+                type="search"
+                placeholder="Search"
+                className="w-full md:w-24 h-4 p-1"
+              />
+              <img
+                src="/search-svgrepo-com.svg"
+                className="w-4 h-4 ml-2"
+                alt="Search"
+              />
             </div>
-            <div className="flex items-center bg-black p-3 text-white" style={{ borderRadius: '8px', height: '2.3rem' }}>
+            <div
+              className="flex items-center bg-black p-3 text-white"
+              style={{ borderRadius: "8px", height: "2.3rem" }}
+            >
               <Link href="/Warenkorb">Warenkorb</Link>
             </div>
           </div>
