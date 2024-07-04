@@ -39,7 +39,8 @@ export default function RootLayout({
               className="flex items-center bg-white p-3"
               style={{ height: "2.3rem" }}
             >
-              <input
+              <input 
+                style={{outline: 'none',borderColor: 'transparent'}}
                 type="search"
                 placeholder="Search"
                 className="w-full md:w-24 h-4 p-1"

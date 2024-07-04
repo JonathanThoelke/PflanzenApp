@@ -36,7 +36,9 @@ export default function Plant({ params }: {
   if(plant != null)
   {
     return (
+      <div className="flex justify-center items-center min-h-screen">
       <PlantCardDetailed key={plant.ID} plant={plant} />
+      </div>
     )
   }
   else 
