@@ -1,7 +1,7 @@
 import { SetStateAction, useEffect, useState } from 'react';
 import plantsData from '../../data/plants.json';
 import PlantCard from '../components/PlantCard';
-import BurgerMenu from './burgermenu.tsx';
+
 
 interface Plant {
   ID: number;
@@ -51,16 +51,7 @@ export default function Shop() {
           <path d="M4 6L20 6" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </button>
-      {showMenu && (
-        <BurgerMenu
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onSelectCategory={(category: SetStateAction<string>) => {
-            setSelectedCategory(category);
-            setShowMenu(false);
-          }}
-        />
-      )}
+  
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {filteredPlants.map((plant) => (
           <div key={plant.ID} className="flex justify-center">
