@@ -15,35 +15,26 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className="flex flex-col min-h-screen">
-        <header
-          className="p-4 flex flex-col md:flex-row items-center justify-between"
-          style={{ backgroundColor: "#FDCA40" }}
-        >
+        <header className="p-4 flex flex-col md:flex-row items-center justify-between bg-yellow-400">
           <div className="flex items-center w-full md:w-auto">
             <Link href="/">
-              <img
-                src="/Logo.png"
-                className="w-12 h-12 absolute left-4 top-2"
-                alt="Logo"
-              />
+              <img src="/Logo.png" className="w-12 h-12" alt="Logo" />
             </Link>
-            <nav className="ml-20 flex gap-8">
-              <Link href="/">Home</Link>
-              <Link href="/Shop">Shop</Link>
-              <Link href="/Kontakt">Kontakt</Link>
-              <Link href="/UeberUns">Über Uns</Link>
-            </nav>
           </div>
-          <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto">
-            <div
-              className="flex items-center bg-white p-3"
-              style={{ height: "2.3rem" }}
-            >
-              <input 
-                style={{outline: 'none',borderColor: 'transparent'}}
+          <nav className="flex flex-1 justify-start items-center mt-4 md:mt-0">
+            <div className="flex gap-4 md:gap-8 text-sm md:text-base flex-wrap">
+              <Link href="/" className="whitespace-nowrap">Home</Link>
+              <Link href="/Shop" className="whitespace-nowrap">Shop</Link>
+              <Link href="/Kontakt" className="whitespace-nowrap">Kontakt</Link>
+              <Link href="/UeberUns" className="whitespace-nowrap">Über Uns</Link>
+            </div>
+          </nav>
+          <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
+            <div className="flex items-center bg-white p-3 h-10 rounded">
+              <input
                 type="search"
                 placeholder="Search"
-                className="w-full md:w-24 h-4 p-1"
+                className="w-full md:w-24 p-1 outline-none border-none"
               />
               <img
                 src="/search-svgrepo-com.svg"
@@ -51,10 +42,7 @@ export default function RootLayout({
                 alt="Search"
               />
             </div>
-            <div
-              className="flex items-center bg-black p-3 text-white"
-              style={{ borderRadius: "8px", height: "2.3rem" }}
-            >
+            <div className="flex items-center bg-black p-3 text-white rounded h-10">
               <Link href="/Warenkorb">Warenkorb</Link>
             </div>
           </div>
