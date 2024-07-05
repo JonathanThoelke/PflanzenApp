@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-const Rechnung = () => {
+const Sofortzahlung = () => {
     const [formData, setFormData] = useState({
         fullName: '',
-        adresse: '',
-        postleitzahl: '',
-        country: '',
+        bankName: '',
+        iban: '',
         email: '',
     });
 
@@ -33,31 +32,21 @@ const Rechnung = () => {
                 />
             </div>
             <div>
-                <label>Adresse*</label>
+                <label>Bank Name*</label>
                 <input
                     type="text"
-                    name="adresse"
-                    value={formData.adresse}
+                    name="bankName"
+                    value={formData.bankName}
                     onChange={handleChange}
                     required
                 />
             </div>
             <div>
-                <label>PLZ*</label>
+                <label>IBAN*</label>
                 <input
                     type="text"
-                    name="postleitzahl"
-                    value={formData.postleitzahl}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div>
-                <label>Land*</label>
-                <input
-                    type="text"
-                    name="country"
-                    value={formData.country}
+                    name="iban"
+                    value={formData.iban}
                     onChange={handleChange}
                     required
                 />
@@ -77,4 +66,4 @@ const Rechnung = () => {
     );
 };
 
-export default Rechnung;
+export default Sofortzahlung;
