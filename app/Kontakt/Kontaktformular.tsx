@@ -28,27 +28,27 @@ const Kontaktformular = () => {
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <h1 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '15px' }}>Kontaktformular</h1>
             <div>
-                <label>Vor- & Nachname*</label>
+                <label>Vor- & Nachname* </label>
                 <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required />
             </div>
             <div>
-                <label>Unternehmen</label>
+                <label>Unternehmen </label>
                 <input type="text" name="company" value={formData.company} onChange={handleChange} />
             </div>
             <div>
-                <label>E-Mail-Adresse*</label>
+                <label>E-Mail-Adresse* </label>
                 <input type="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
             <div>
-                <label>Telefonnummer*</label>
+                <label>Telefonnummer* </label>
                 <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
             </div>
             <div>
-                <label>PLZ*</label>
+                <label>PLZ* </label>
                 <input type="text" name="postleitzahl" value={formData.postleitzahl} onChange={handleChange} required />
             </div>
             <div>
-                <label>Ort*</label>
+                <label>Ort* </label>
                 <input type="text" name="city" value={formData.city} onChange={handleChange} required />
             </div>
             <div>
@@ -62,7 +62,7 @@ const Kontaktformular = () => {
                 </select>
             </div>
             <div>
-                <label>Nachricht*</label>
+                <label>Nachricht* </label>
                 <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
             </div>
             <div>
@@ -70,7 +70,7 @@ const Kontaktformular = () => {
                     <input type="checkbox" required /> Mit der Bestätigung akzeptieren Sie unsere Datenschutzbedingungen.
                 </label>
             </div>
-            <button className="bg-customGreen hover:bg-customGreen-hover text-white font-bold py-2 px-4 rounded" style={{ marginTop: '20px' }} type="submit">Abschicken</button>
+            <button className="bg-customGreen hover:bg-customGreen-hover text-white font-bold py-2 px-4 rounded" style={{ marginTop: '20px', width: '120px' }} type="submit">Abschicken</button>
         </form>
     );
 };
