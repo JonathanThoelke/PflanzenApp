@@ -28,7 +28,7 @@ export default function RootLayout({
                 <Link href="/" className="whitespace-nowrap">Home</Link>
                 <Link href="/Shop" className="whitespace-nowrap">Shop</Link>
                 <Link href="/Kontakt" className="whitespace-nowrap">Kontakt</Link>
-                <Link href="/UeberUns" className="whitespace-nowrap">Über Uns</Link>
+                <Link href="/UeberUns" className="whitespace-nowrap">Über uns</Link>
               </div>
             </nav>
             <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
