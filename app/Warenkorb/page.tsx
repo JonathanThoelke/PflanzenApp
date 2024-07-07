@@ -296,6 +296,7 @@ const Cart = () => {
   const { state, dispatch } = useCart();
   const [address, setAddress] = useState({ firstName: '', lastName: '', street: '', houseNumber: '', postalCode: '', city: '' });
   const [email, setEmail] = useState('');
+  const [errors, setErrors] = useState({ email: '', postalCode: '' });
 
   const calculateTotalPrice = () => {
     return state.items.reduce((total, item) => {
@@ -308,14 +309,44 @@ const Cart = () => {
     dispatch({ type: 'REMOVE_FROM_CART', plant });
   };
 
+  const validateEmail = (email: string) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
+  const validatePostalCode = (postalCode: string) => {
+    const postalCodePattern = /^\d{5}$/; // assuming German postal codes
+    return postalCodePattern.test(postalCode);
+  };
+
   const handlePlaceOrder = async () => {
+    let valid = true;
+    let emailError = '';
+    let postalCodeError = '';
+
+    if (!validateEmail(email)) {
+      emailError = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+      valid = false;
+    }
+
+    if (!validatePostalCode(address.postalCode)) {
+      postalCodeError = 'Bitte geben Sie eine gültige Postleitzahl ein.';
+      valid = false;
+    }
+
+    setErrors({ email: emailError, postalCode: postalCodeError });
+
     if (!address.firstName || !address.lastName || !address.street || !address.houseNumber || !address.postalCode || !address.city || !email) {
       alert('Bitte füllen Sie alle Adressfelder aus und geben Sie Ihre E-Mail-Adresse ein.');
       return;
     }
 
+    if (!valid) {
+      return;
+    }
+
     try {
-      const response = await fetch('/api/sendMail/', {
+      const response = await fetch('/api/sendMail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -422,6 +453,7 @@ const Cart = () => {
                     onChange={(e) => setAddress({ ...address, postalCode: e.target.value })} 
                     className="mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-800 text-white"
                   />
+                  {errors.postalCode && <p className="text-red-500 text-xs">{errors.postalCode}</p>}
                 </div>
                 <div className="flex-1">
                   <label htmlFor="city" className="block text-sm font-medium text-gray-200">Ort</label>
@@ -443,6 +475,7 @@ const Cart = () => {
                   onChange={(e) => setEmail(e.target.value)} 
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-800 text-white"
                 />
+                {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
               </div>
             </div>
             <div className="text-right">
