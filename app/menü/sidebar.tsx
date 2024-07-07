@@ -1,32 +1,19 @@
-// Menü 
+import React from 'react';
 
-"use client";
-
-import React, { useState } from 'react';
-
-
-interface SidebarProps {
-  isOpen: boolean;
-  toggleSidebar: () => void;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
+export default function Sidebar() {
   return (
-    <div className={`fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out bg-white w-64 shadow-lg z-50`}>
+    <div className="w-64 bg-yellow-500 h-full">
       <div className="p-4">
-        <button className="text-xl font-bold mb-4" onClick={toggleSidebar}>
-        </button>
+        <button className="text-xl font-bold mb-4">Menü schließen X</button>
         <ul>
-          <li className="mb-2"><a href="#zimmerpflanzen">Zimmerpflanzen (2)</a></li>
-          <li className="mb-2"><a href="#gartenpflanzen">Gartenpflanzen (2)</a></li>
-          <li className="mb-2"><a href="#sukkulenten">Sukkulenten (1)</a></li>
-          <li className="mb-2"><a href="#wasserpflanzen">Wasserpflanzen (0)</a></li>
-          <li className="mb-2"><a href="#klimabaume">Klimabäume (1)</a></li>
-          <li className="mb-2"><a href="#gartenbedarf">Gartenbedarf (0)</a></li>
+          <li className="mb-2">Zimmerpflanzen (2)</li>
+          <li className="mb-2">Gartenpflanzen (2)</li>
+          <li className="mb-2">Sukkulenten (1)</li>
+          <li className="mb-2">Wasserpflanzen (0)</li>
+          <li className="mb-2">Klimabäume (1)</li>
+          <li className="mb-2">Gartenbedarf (0)</li>
         </ul>
       </div>
     </div>
   );
-};
-
-export default Sidebar;
+}
