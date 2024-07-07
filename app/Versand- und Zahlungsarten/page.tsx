@@ -1,7 +1,7 @@
 // App.js
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Homepage from './page.tsx';
-import Checkout from './checkout.tsx';
+import Checkout from './Checkout.tsx';
 import ThankYou from './Thank you.tsx';
 
 function App() {
