@@ -5,7 +5,6 @@
 const Page = () => {
   return (
     <div>
-      <b>Über uns</b>
       <div className="parentwelcome">
         <div
           style={{ gridArea: "above", backgroundColor: "black", opacity: 0.6 }}
@@ -24,6 +23,7 @@ const Page = () => {
           style={{ gridArea: "under", backgroundColor: "black", opacity: 0.6 }}
         ></div>
       </div>
+      <div className="p-4">
       <h2 style={{fontWeight: "bold", fontSize: "23px" }}>
         Unsere Geschichte
       </h2>
@@ -80,6 +80,7 @@ const Page = () => {
         nächsten Gartenprojekt zu unterstützen!
       </p>
       <p>Ihr Gartenapp-Team</p>
+      </div>
     </div>
   );
 };
