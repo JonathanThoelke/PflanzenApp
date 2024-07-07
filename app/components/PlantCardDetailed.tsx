@@ -24,7 +24,7 @@ interface PlantCardProps {
 const PlantCardDetailed: React.FC<PlantCardProps> = ({ plant }) => {
   const details = "/Pflanzen/" + plant.ID;
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
+    <div className="max-w-lg rounded overflow-hidden shadow-lg m-4">
       <Link href={ details }>
         <img className="w-full object-cover h-48" src={plant.imagePath} alt={plant.deutscherName} />
         <div className="px-6 py-4">
