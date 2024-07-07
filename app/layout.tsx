@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import "./globals.css";
 import { CartProvider } from "./context/CartContext";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Pflanzen-App",
@@ -23,7 +23,7 @@ export default function RootLayout({
                 <img src="/Logo.png" className="w-12 h-12" alt="Logo" />
               </Link>
             </div>
-            <nav className="flex flex-1 justify-start items-center mt-4 md:mt-0">
+            <nav className="flex flex-1 justify-start items-center mt-4 md:mt-0" style={{ marginLeft: '15px' }}>
               <div className="flex gap-2 md:gap-4 text-sm md:text-base flex-nowrap">
                 <Link href="/" className="whitespace-nowrap">Home</Link>
                 <Link href="/Shop" className="whitespace-nowrap">Shop</Link>
