@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Kontaktformular = () => {
     const [formData, setFormData] = useState({
@@ -21,12 +21,12 @@ const Kontaktformular = () => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        // Handle form submission logic here
         console.log('Form submitted:', formData);
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <h1 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '15px' }}>Kontaktformular</h1>
             <div>
                 <label>Vor- & Nachname*</label>
                 <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required />
@@ -52,7 +52,7 @@ const Kontaktformular = () => {
                 <input type="text" name="city" value={formData.city} onChange={handleChange} required />
             </div>
             <div>
-                <label>Themenbereich</label>
+                <label>Themenbereich </label>
                 <select name="topic" value={formData.topic} onChange={handleChange}>
                     <option value="">Wählen Sie einen Bereich</option>
                     <option value="topic1">Allgemeine Fragen</option>
@@ -70,7 +70,7 @@ const Kontaktformular = () => {
                     <input type="checkbox" required /> Mit der Bestätigung akzeptieren Sie unsere Datenschutzbedingungen.
                 </label>
             </div>
-            <button type="submit">Abschicken</button>
+            <button className="bg-customGreen hover:bg-customGreen-hover text-white font-bold py-2 px-4 rounded" style={{ marginTop: '20px' }} type="submit">Abschicken</button>
         </form>
     );
 };
