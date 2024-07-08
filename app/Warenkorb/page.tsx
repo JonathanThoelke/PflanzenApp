@@ -65,7 +65,7 @@ const Cart = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="bg-[#000300] p-4 rounded text-white w-full max-w-3xl">
+      <div className="bg-[#000300] p-4 rounded-lg text-white w-full max-w-3xl">
         <h1 className="text-3xl mb-4 text-center">Warenkorb</h1>
         {state.items.length === 0 ? (
           <p className="text-center">Ihr Warenkorb ist leer</p>
