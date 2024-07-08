@@ -25,35 +25,81 @@ const Kontaktformular = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <h1 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '15px' }}>Kontaktformular</h1>
-            <div>
-                <label>Vor- & Nachname* </label>
-                <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required />
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 border border-[#e63462] p-6 rounded-lg w-full max-w-2xl mx-auto">
+            <h1 className="text-2xl font-bold mb-4 text-[#0d1321]">Kontaktformular</h1>
+            <div className="w-full">
+                <label className="text-[#0d1321]">Vor- & Nachname* </label>
+                <input 
+                    type="text" 
+                    name="fullName" 
+                    value={formData.fullName} 
+                    onChange={handleChange} 
+                    required 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                />
             </div>
-            <div>
-                <label>Unternehmen </label>
-                <input type="text" name="company" value={formData.company} onChange={handleChange} />
+            <div className="w-full">
+                <label className="text-[#0d1321]">Unternehmen </label>
+                <input 
+                    type="text" 
+                    name="company" 
+                    value={formData.company} 
+                    onChange={handleChange} 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                />
             </div>
-            <div>
-                <label>E-Mail-Adresse* </label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+            <div className="w-full">
+                <label className="text-[#0d1321]">E-Mail-Adresse* </label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    required 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                />
             </div>
-            <div>
-                <label>Telefonnummer* </label>
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
+            <div className="w-full">
+                <label className="text-[#0d1321]">Telefonnummer* </label>
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    required 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                />
             </div>
-            <div>
-                <label>PLZ* </label>
-                <input type="text" name="postleitzahl" value={formData.postleitzahl} onChange={handleChange} required />
+            <div className="w-full">
+                <label className="text-[#0d1321]">PLZ* </label>
+                <input 
+                    type="text" 
+                    name="postleitzahl" 
+                    value={formData.postleitzahl} 
+                    onChange={handleChange} 
+                    required 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                />
             </div>
-            <div>
-                <label>Ort* </label>
-                <input type="text" name="city" value={formData.city} onChange={handleChange} required />
+            <div className="w-full">
+                <label className="text-[#0d1321]">Ort* </label>
+                <input 
+                    type="text" 
+                    name="city" 
+                    value={formData.city} 
+                    onChange={handleChange} 
+                    required 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                />
             </div>
-            <div>
-                <label>Themenbereich </label>
-                <select name="topic" value={formData.topic} onChange={handleChange}>
+            <div className="w-full">
+                <label className="text-[#0d1321]">Themenbereich </label>
+                <select 
+                    name="topic" 
+                    value={formData.topic} 
+                    onChange={handleChange} 
+                    className="border border-[#e63462] p-2 rounded w-full active:border-[#e63462]"
+                >
                     <option value="">Wählen Sie einen Bereich</option>
                     <option value="topic1">Allgemeine Fragen</option>
                     <option value="topic2">Pflegehinweise</option>
@@ -61,16 +107,27 @@ const Kontaktformular = () => {
                     <option value="topic4">Rückgabe und Umtausch</option>
                 </select>
             </div>
-            <div>
-                <label>Nachricht* </label>
-                <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
+            <div className="w-full">
+                <label className="text-[#0d1321]">Nachricht* </label>
+                <textarea 
+                    name="message" 
+                    value={formData.message} 
+                    onChange={handleChange} 
+                    required 
+                    className="border border-[#e63462] p-2 rounded w-full"
+                ></textarea>
             </div>
-            <div>
-                <label>
-                    <input type="checkbox" required /> Mit der Bestätigung akzeptieren Sie unsere Datenschutzbedingungen.
+            <div className="w-full">
+                <label className="text-[#0d1321]">
+                    <input type="checkbox" required className="mr-2" /> Mit der Bestätigung akzeptieren Sie unsere Datenschutzbedingungen.
                 </label>
             </div>
-            <button className="bg-customGreen hover:bg-customGreen-hover text-white font-bold py-2 px-4 rounded" style={{ marginTop: '20px', width: '120px' }} type="submit">Abschicken</button>
+            <button 
+                className="bg-[#90ad97] hover:bg-[#7b9c82] text-white font-bold py-2 px-4 rounded mt-4 w-32" 
+                type="submit"
+            >
+                Abschicken
+            </button>
         </form>
     );
 };
