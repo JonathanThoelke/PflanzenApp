@@ -17,12 +17,12 @@ export async function POST(req: NextRequest) {
   const paymentDueDate = new Date(currentDateTime);
   paymentDueDate.setDate(paymentDueDate.getDate() + 30);
 
-  const formattedDateTime = format(currentDateTime, 'dd MMMM yyyy HH:mm');
-  const formattedDueDate = format(paymentDueDate, 'dd MMMM yyyy');
+  const formattedDateTime = format(currentDateTime, 'dd MM yyyy HH:mm:ss.SSS');
+  const formattedDueDate = format(paymentDueDate, 'dd.MM.yyyy');
 
   const iban = process.env.BANK_IBAN;
   const accountHolder = process.env.BANK_ACCOUNT_HOLDER;
-  const reference = format(currentDateTime, 'ddMMyyyyHHmm');
+  const reference = format(currentDateTime, 'ddMMyyyyHHmmssSSS');
 
   const mailOptions = {
     from: process.env.GMAIL_USER,
