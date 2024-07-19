@@ -1,6 +1,6 @@
 //Homepage
 import React from 'react';
-import Sidebar from './menü/Sidebar.tsx';
+import Sidebar from './menü/sidebar.tsx';
 
 export default function Home() {
   return (

@@ -1,24 +1,26 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { notFound } from "next/navigation";
+import { Plant as PlantType } from "../../interfaces";
 import PlantCardDetailed from "@/app/components/PlantCardDetailed";
 import plantsData from "../../../data/plants.json";
+import { notFound } from "next/navigation";
 
-interface Plant {
-  ID: number;
-  deutscherName: string;
-  lateinischerName: string;
-  gattung: string;
-  haustiergeeigent: boolean;
-  gießenProWoche: number;
-  duengenProMonat: number;
-  lichtbedarf: number;
-  wuchshöhe: number;
-  bluetezeit: number[] | null;
-  preis: string;
-  imagePath: string;
-  beschreibung: string;
+
+const dummy:PlantType = {
+  "ID": 0,
+    "deutscherName": "",
+    "lateinischerName": "",
+    "gattung": "",
+    "haustiergeeigent": false,
+    "gießenProWoche": 0,
+    "duengenProMonat": 0,
+    "lichtbedarf": 0,
+    "wuchshöhe": 0,
+    "bluetezeit": [],
+    "preis": "0",
+    "imagePath": "",
+    "beschreibung": ""
 }
 
 export default function Plant({ params }: {
@@ -26,24 +28,25 @@ export default function Plant({ params }: {
     slug: string[];
   }
 }) {
-  const [plant, setPlant] = useState<Plant>();
+  const [plant, setPlant] = useState<PlantType>(dummy);
 
   useEffect(() => {
     // Simuliere das Laden der Daten (hier aus einer JSON-Datei)
-    setPlant(plantsData.find((item) => item.ID === parseInt(params.slug[0])));
+    var searched = plantsData.find((item) => item.ID === parseInt(params.slug[0]));
+    if(searched != null)
+      {
+        setPlant(searched);
+      }
+
   }, []);
 
-  if(plant != null)
+  if(plant != dummy)  //Der dummy verhindert "is possibly 'undefined'"
   {
     return (
       <div className="flex justify-center items-center min-h-screen">
       <PlantCardDetailed key={plant.ID} plant={plant} />
       </div>
     )
-  }
-  else 
-  {
-    return notFound
   }
 }
   
