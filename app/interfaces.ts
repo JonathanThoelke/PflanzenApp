@@ -12,6 +12,7 @@ export interface Plant {
     bluetezeit: number[] | null;
     preis: string;
     imagePath: string;
-    beschreibung: string;  
+    beschreibung: string;
+    kategorien: string[];
   }
   

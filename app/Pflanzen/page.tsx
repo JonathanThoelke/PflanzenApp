@@ -18,6 +18,7 @@ const Pflanzen: React.FC = () => {
     let nameDE = searchParams.get('name');
     let nameLT = searchParams.get('nameL');
     let desc = searchParams.get('desc');
+    let category = searchParams.get('cat');
 
     useEffect(() => {
         let filteredList = new Array();
@@ -42,7 +43,6 @@ const Pflanzen: React.FC = () => {
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
-
         if(nameLT != null){
             nameLT = nameLT.toLowerCase();
             if(exclusive)
@@ -74,6 +74,21 @@ const Pflanzen: React.FC = () => {
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
+        if(category != null){
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.kategorien.includes(category));
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.kategorien.includes(category)
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+
         setPlants(filteredList);
     }, []);
 
