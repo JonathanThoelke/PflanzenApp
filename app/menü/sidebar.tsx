@@ -1,7 +1,21 @@
 // src/components/Sidebar.tsx
 import React from 'react';
+import plantsData from "../../data/plants.json";
+import Link from 'next/link';
 
 export default function Navigation() {
+  const numZimmer = plantsData.filter(item => 
+    item.kategorien.includes("Zimmerpflanze")).length;
+  const numGarten = plantsData.filter(item => 
+    item.kategorien.includes("Gartenpflanze")).length;
+  const numSukk = plantsData.filter(item => 
+    item.kategorien.includes("Sukkulente")).length;
+  const numWasser = plantsData.filter(item => 
+    item.kategorien.includes("Wasserpflanze")).length;
+  const numKlima = plantsData.filter(item => 
+    item.kategorien.includes("Klimabaum")).length;
+  const numBedarf = 0;
+  
   return (
     <nav className="bg-white-500 text-black p-4 flex justify-between items-center">
       <div className="w-64 bg-white h-full text-black p-4">
@@ -10,24 +24,32 @@ export default function Navigation() {
         </div>
         <nav>
           <ul>
+            <li className="mb-2 hover:bg-gray-200 p-2 rounded"><Link href="/" className="block">Home</Link></li>
+            <li className="mb-2 hover:bg-gray-200 p-2 rounded"><Link href="/Shop" className="block">Shop</Link></li>
+          </ul>
+          <ul>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded">
-              <a href="#" className="block">Zimmerpflanzen (2)</a>
+              <Link className="block" href="/Pflanzen?cat=Zimmerpflanze">Zimmerpflanzen {numZimmer}</Link>
             </li>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded">
-              <a href="#" className="block">Gartenpflanzen (2)</a>
+              <Link className="block" href="/Pflanzen?cat=Gartenpflanze">Gartenpflanzen {numGarten}</Link>
             </li>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded">
-              <a href="#" className="block">Sukkulenten (1)</a>
+              <Link className="block" href="/Pflanzen?cat=Sukkulente">Sukkulenten {numSukk}</Link>
             </li>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded">
-              <a href="#" className="block">Wasserpflanzen (0)</a>
+              <Link className="block" href="/Pflanzen?cat=Wasserpflanze">Wasserpflanzen {numWasser}</Link>
             </li>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded">
-              <a href="#" className="block">Klimabäume (1)</a>
+              <Link className="block" href="/Pflanzen?cat=Klimabaum">Klimabäume {numKlima}</Link>
             </li>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded">
-              <a href="#" className="block">Gartenbedarf (0)</a>
+              <Link className="block" href="#">Gartenbedarf {numBedarf}</Link>
             </li>
+          </ul>
+          <ul>
+            <li className="mb-2 hover:bg-gray-200 p-2 rounded"><Link href="/Kontakt" className="block">Kontakt</Link></li>
+            <li className="mb-2 hover:bg-gray-200 p-2 rounded"><Link href="/UeberUns" className="block">Über uns</Link></li>
           </ul>
         </nav>
       </div>

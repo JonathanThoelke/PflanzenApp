@@ -19,7 +19,8 @@ const dummy:PlantType = {
     "bluetezeit": [],
     "preis": "0",
     "imagePath": "",
-    "beschreibung": ""
+    "beschreibung": "",
+    "kategorien": []
 }
 
 export default function Plant({ params }: {

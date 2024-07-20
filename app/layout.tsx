@@ -24,14 +24,14 @@ export default function RootLayout({
                 <img src="/Logo.png" className="w-12 h-12" alt="Logo" />
               </Link>
             </div>
-            <nav className="flex flex-1 justify-start items-center mt-4 md:mt-0" style={{ marginLeft: '15px' }}>
+            {/*<nav className="flex flex-1 justify-start items-center mt-4 md:mt-0" style={{ marginLeft: '15px' }}>
               <div className="flex gap-2 md:gap-4 text-sm md:text-base flex-nowrap">
                 <Link href="/" className="whitespace-nowrap">Home</Link>
                 <Link href="/Shop" className="whitespace-nowrap">Shop</Link>
                 <Link href="/Kontakt" className="whitespace-nowrap">Kontakt</Link>
                 <Link href="/UeberUns" className="whitespace-nowrap">Über uns</Link>
               </div>
-            </nav>
+            </nav>*/}
             <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
               <Searchbar/>
               <div className="flex items-center bg-black p-3 text-white rounded h-10">
