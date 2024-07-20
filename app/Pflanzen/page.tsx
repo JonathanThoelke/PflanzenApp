@@ -13,17 +13,68 @@ const Pflanzen: React.FC = () => {
     //Suchbedingungen werden aus URL entnommen - könnte erweitert werden 
     //mit z.B. '&haustier=false' für Suchbedingungen für nicht-Textbasierte Suche
     //oder Suche nach 'NameDE', 'NameLatein' etc könnten separiert werden.
-    let searchTerm = searchParams.get('search') || '';
-    searchTerm = searchTerm.toLowerCase();
+    
+    let exclusive = !!searchParams.get('exc') || false;
+    let nameDE = searchParams.get('name');
+    let nameLT = searchParams.get('nameL');
+    let desc = searchParams.get('desc');
 
     useEffect(() => {
+        let filteredList = new Array();
+        //Je nachdem, ob 'OR' oder 'AND' gesucht werden soll muss das Array entsprechend
+        //leer oder voll initialisiert werden
+        if(exclusive) {
+            filteredList = plants
+        }
         //Hier die Funktionen der Filter implementieren
-        const searched = plants.filter(item => 
-            item.deutscherName.toLowerCase().includes(searchTerm)
-            || item.lateinischerName.toLowerCase().includes(searchTerm) 
-            || item.gattung.toLowerCase().includes(searchTerm)
-        );
-        setPlants(searched);
+        if(nameDE != null){
+            nameDE = nameDE.toLowerCase();
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.deutscherName.toLowerCase().includes(nameDE));
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.deutscherName.toLowerCase().includes(nameDE)
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+
+        if(nameLT != null){
+            nameLT = nameLT.toLowerCase();
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.lateinischerName.toLowerCase().includes(nameLT));
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.lateinischerName.toLowerCase().includes(nameLT)
+                );
+                console.log(addendum.length);
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+        if(desc != null){
+            desc = desc.toLowerCase();
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.beschreibung.toLowerCase().includes(desc));
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.beschreibung.toLowerCase().includes(desc)
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+        setPlants(filteredList);
     }, []);
 
     return (
