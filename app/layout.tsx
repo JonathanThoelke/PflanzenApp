@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CartProvider } from "./context/CartContext";
 import "./globals.css";
+import Searchbar from "./components/Searchbar";
 
 export const metadata: Metadata = {
   title: "Pflanzen-App",
@@ -32,18 +33,7 @@ export default function RootLayout({
               </div>
             </nav>
             <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
-              <div className="flex items-center bg-white p-3 h-10 rounded">
-                <input
-                  type="search"
-                  placeholder="Search"
-                  className="w-full md:w-24 p-1 outline-none border-none"
-                />
-                <img
-                  src="/search-svgrepo-com.svg"
-                  className="w-4 h-4 ml-2"
-                  alt="Search"
-                />
-              </div>
+              <Searchbar/>
               <div className="flex items-center bg-black p-3 text-white rounded h-10">
                 <Link href="/Warenkorb">Warenkorb</Link>
               </div>

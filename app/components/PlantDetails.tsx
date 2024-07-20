@@ -1,3 +1,4 @@
+//deprecated
 import AddToCart from "./AddToCart";
 
 interface Plant {

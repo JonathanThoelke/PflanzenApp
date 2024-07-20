@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Plant as PlantType } from "../../interfaces";
 import PlantCardDetailed from "@/app/components/PlantCardDetailed";
 import plantsData from "../../../data/plants.json";
-import { notFound } from "next/navigation";
 
 
 const dummy:PlantType = {
@@ -44,7 +43,7 @@ export default function Plant({ params }: {
   {
     return (
       <div className="flex justify-center items-center min-h-screen">
-      <PlantCardDetailed key={plant.ID} plant={plant} />
+        <PlantCardDetailed key={plant.ID} plant={plant} />
       </div>
     )
   }
