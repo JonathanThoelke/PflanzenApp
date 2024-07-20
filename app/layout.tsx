@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CartProvider } from "./context/CartContext";
 import "./globals.css";
 import Searchbar from "./components/Searchbar";
+import Sidebar from "./menü/sidebar";
 
 export const metadata: Metadata = {
   title: "Pflanzen-App",
@@ -14,31 +15,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="de">
       <body className="flex flex-col min-h-screen">
         <CartProvider>
-          <header className="p-4 flex flex-col md:flex-row items-center justify-between bg-yellow-400">
+          <header className="p-4 flex flex-col md:flex-row items-center justify-between bg-yellow-400 z-50 sticky top-0">
             <div className="flex items-center w-full md:w-auto">
               <Link href="/">
-                <img src="/Logo.png" className="w-12 h-12" alt="Logo" />
+                <img src="/Logo.png" className="w-10 h-10" alt="Logo" />
               </Link>
-            </div>
-            {/*<nav className="flex flex-1 justify-start items-center mt-4 md:mt-0" style={{ marginLeft: '15px' }}>
-              <div className="flex gap-2 md:gap-4 text-sm md:text-base flex-nowrap">
-                <Link href="/" className="whitespace-nowrap">Home</Link>
-                <Link href="/Shop" className="whitespace-nowrap">Shop</Link>
-                <Link href="/Kontakt" className="whitespace-nowrap">Kontakt</Link>
-                <Link href="/UeberUns" className="whitespace-nowrap">Über uns</Link>
-              </div>
-            </nav>*/}
-            <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
               <Searchbar/>
+            </div>
+            <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
+              <button><object className="h-10 w-10" data="burger-menu-svgrepo-com.svg"></object></button>
               <div className="flex items-center bg-black p-3 text-white rounded h-10">
                 <Link href="/Warenkorb">Warenkorb</Link>
               </div>
             </div>
           </header>
+          <Sidebar/>
           <main className="flex-grow">{children}</main>
           <footer className="bg-gray-200 p-4 text-center">
             <Link href="/Impressum">Impressum</Link>

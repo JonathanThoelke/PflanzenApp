@@ -17,11 +17,11 @@ export default function Navigation() {
   const numBedarf = 0;
   
   return (
-    <nav className="bg-white-500 text-black p-4 flex justify-between items-center">
+    <nav className="bg-white-500 text-black p-4 flex justify-between items-center z-10 fixed top-16 hidden">
       <div className="w-64 bg-white h-full text-black p-4">
-        <div className="mb-4">
+        {/*<div className="mb-4">
           <button className="text-xl font-bold">Menü schließen X</button>
-        </div>
+        </div>*/}
         <nav>
           <ul>
             <li className="mb-2 hover:bg-gray-200 p-2 rounded"><Link href="/" className="block">Home</Link></li>
