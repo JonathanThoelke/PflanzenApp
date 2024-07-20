@@ -17,7 +17,7 @@ export default function Navigation() {
   const numBedarf = 0;
   
   return (
-    <nav className="bg-white-500 text-black p-4 flex justify-between items-center z-10 fixed top-16 hidden">
+    <nav className="bg-white-500 text-black p-4 flex justify-between items-center z-10 fixed top-16 -left-400 -left-60 transition-left active:-left-0 ease-in-out duration-700">
       <div className="w-64 bg-white h-full text-black p-4">
         {/*<div className="mb-4">
           <button className="text-xl font-bold">Menü schließen X</button>
