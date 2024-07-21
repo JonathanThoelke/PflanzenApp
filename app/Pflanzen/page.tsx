@@ -21,7 +21,7 @@ const Pflanzen: React.FC = () => {
     let category = searchParams.get('cat');
     let height = searchParams.get('h');
     let light = searchParams.get('light');
-    let pet = searchParams.get('pet') || true;
+    let pet = searchParams.get('pet');
     let bloom = searchParams.get('bloom');
 
     useEffect(() => {
@@ -122,7 +122,7 @@ const Pflanzen: React.FC = () => {
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
-        if(pet != null){
+        /*if(pet != null){
             if(exclusive)
             {
                 filteredList = filteredList.filter(item => 
@@ -135,7 +135,7 @@ const Pflanzen: React.FC = () => {
                 );
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
-        }
+        }*/
         if(bloom != null){
             let bloomNum = parseInt(bloom);
             if(exclusive)
@@ -151,8 +151,6 @@ const Pflanzen: React.FC = () => {
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
-
-
 
         setPlants(filteredList);
     }, []);
