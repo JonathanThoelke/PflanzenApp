@@ -19,6 +19,7 @@ const Searchbar: React.FC = () => {
     return (
       <form onSubmit={handleSubmit} className="flex items-center bg-white p-3 h-10 rounded">
       <input
+        id="input"
         type="search"
         value={inputValue}
         onChange={handleInputChange}

@@ -19,6 +19,10 @@ const Pflanzen: React.FC = () => {
     let nameLT = searchParams.get('nameL');
     let desc = searchParams.get('desc');
     let category = searchParams.get('cat');
+    let height = searchParams.get('h');
+    let light = searchParams.get('light');
+    let pet = searchParams.get('pet') || true;
+    let bloom = searchParams.get('bloom');
 
     useEffect(() => {
         let filteredList = new Array();
@@ -88,6 +92,67 @@ const Pflanzen: React.FC = () => {
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
+        if(height != null){
+            let heightNum = parseInt(height);
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.wuchshöhe <= heightNum);
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.wuchshöhe <= heightNum
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+        if(light != null){
+            let lightNum = parseInt(light);
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.lichtbedarf <= lightNum);
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.lichtbedarf <= lightNum
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+        if(pet != null){
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.haustiergeeigent == pet);
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.haustiergeeigent == pet
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+        if(bloom != null){
+            let bloomNum = parseInt(bloom);
+            if(exclusive)
+            {
+                filteredList = filteredList.filter(item => 
+                    item.bluetezeit == null || item.bluetezeit.includes(bloomNum));
+            }
+            else
+            {
+                let addendum = plants.filter(item =>
+                    item.bluetezeit == null || item.bluetezeit.includes(bloomNum)
+                );
+                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            }
+        }
+
+
 
         setPlants(filteredList);
     }, []);
