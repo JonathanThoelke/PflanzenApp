@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./styles.css";
+import "./Button";
 
 const Page = () => {
     const handleStart = () => {
@@ -17,11 +17,11 @@ const Page = () => {
             </p>
             <br></br>
             <button className="button" onClick={handleStart}>
-                    Frage 2
+                    Frage 5
                 </button>
                 <p>
-                   Möchten Sie eine Pflanze, die große
-                   auffällige Blüten ausbildet?
+                   Darf Ihre Pflanze einen starken Duft 
+                   verströmen?
                 </p>
                 <div className="button-container">
                     <button className="button" onClick={() => handleStart()}>
@@ -34,8 +34,14 @@ const Page = () => {
                         Nicht relevant
                     </button>
                     <br></br>
-                    <a href="pflanzenapp/public/images/dahlien.png"></a>
-                    </div>
+                    <p>
+                        Es gibt tolle duftende Blume oder Kräuter.
+                        Zum Beispiel: Rosen, Colorkraut, Zironenverbene 
+                        oder Basilikum.
+                    </p>
+                    <br></br>
+                    <a href="pflanzenapp/public/images/rose.jpg"></a>
+                        </div>
                     </div>
             
         
