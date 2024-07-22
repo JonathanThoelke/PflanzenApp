@@ -1,0 +1,18 @@
+/* Button */
+.empfehl-o-mat {
+    text-align: center;
+}
+
+.start-button {
+    background-color: olive;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: darkolivegreen;
+}
