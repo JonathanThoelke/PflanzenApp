@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router'; // Assuming you're using Next.js for routing
+import { useRouter } from 'next/navigation'; // Für Navigation
+import { useSearchParams } from 'next/navigation'; // Für Abfrageparameter
 import Frage1 from './Frage1';
 import Frage2 from './Frage2';
 import Frage3 from './Frage3';
@@ -8,33 +9,53 @@ import Frage5 from './Frage5';
 import Button from './Button';
 
 const Page = () => {
-    const router = useRouter();
-    const [inputValue, setInputValue] = useState(''); // Beispiel zur Verwaltung von inputValue
+    const router = useRouter(); // Router-Instanz für Navigation
+    const searchParams = useSearchParams(); // Abfrageparameter aus der URL abrufen
+    
+    const [inputValue, setInputValue] = useState(''); // Zustand für Eingabewert
+
+    // Funktion, die bei einem Button-Klick ausgeführt wird
     const handleClick = () => {
-        alert('Button clicked!');
-        router.push(`/Pflanzen?name=${inputValue}`); // Navigiere zur neuen URL
+        // Validierung des Eingabewerts
+        if (inputValue.trim() === '') {
+            alert('Bitte geben Sie einen Wert ein');
+            return;
+        }
+
+        // Navigation zur neuen URL mit inputValue als Abfrageparameter
+        router.push(`/Pflanzen?name=${encodeURIComponent(inputValue)}`);
     };
 
-    // Angenommene `searchParams` werden aus den Router-Query-Parametern abgerufen
-    const { query } = router;
-    const exclusive = !!query.exc || false;
-    const nameDE = query.name;
-    const nameLT = query.nameL;
-    const desc = query.desc;
-    const category = query.cat;
-    const height = query.h;
-    const light = query.light;
-    const pet = query.pet;
-    const bloom = query.bloom;
-
+    // Abfrageparameter aus searchParams extrahieren
+    let exclusive = !!searchParams.get('exc') || false;
+    let nameDE = searchParams.get('name');
+    let nameLT = searchParams.get('nameL');
+    let desc = searchParams.get('desc');
+    let category = searchParams.get('cat');
+    let height = searchParams.get('h');
+    let light = searchParams.get('light');
+    let pet = searchParams.get('pet');
+    let bloom = searchParams.get('bloom');
+    
     return (
         <div className="p-4">
+            {/* Rendering der Fragen-Komponenten */}
             <Frage1 />
             <Frage2 />
             <Frage3 />
             <Frage4 />
             <Frage5 />
-            <Button label="Click Me" onClick={handleClick} />
+            
+            {/* Eingabefeld zum Aktualisieren des inputValue */}
+            <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                placeholder="Geben Sie einen Namen ein"
+            />
+            
+            {/* Button zum Auslösen der Navigation */}
+            <Button label="Klick mich" onClick={handleClick} />
         </div>
     );
 }
