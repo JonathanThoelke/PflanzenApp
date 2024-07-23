@@ -1,11 +1,13 @@
 //Homepage
 import React from 'react';
+import JetztStarten from './Empfehlomat/JetztStarten';
 
 export default function Home() {
   return (
     <div className="flex">
       <div className="p-4 flex-1">
         <h1 className="text-3xl font-bold mb-4">Willkommen</h1>
+        <JetztStarten />
         <p className="mb-4">
           Bei der Pflanzen-App bieten wir eine große Auswahl an Pflanzen, die
           perfekt für jedes Zuhause oder jeden Garten geeignet sind. Unsere App

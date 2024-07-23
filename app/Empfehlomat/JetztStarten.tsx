@@ -1,11 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React from "react";
-import "./styles.css";
+import Button from './Button';
 
-const Page = () => {
+const JetztStarten = () => {
+    const router = useRouter();
     const handleStart = () => {
-        alert("Button clicked!"); //Startbutton
+        router.push('/Empfehlomat')
     };
 
     return (
@@ -20,21 +22,18 @@ const Page = () => {
                     Empfehl 'o' mat
                 </p>
                 <br />
-                <button className="start-button" onClick={handleStart}>
-                    Jetzt starten
-                </button>
+                <Button label={"Jetzt starten"} onClick={handleStart} />
             </div>
             <br></br>
             <p>
-                Unsere 'o' mat besteht aus 5 Fragen.
+                Unser 'o' mat besteht aus 4 Fragen.
                 Nachdem Sie alle Fragen beantwortet haben, 
                 werden wir Ihnen passende Pflanzen für Ihre
                 Grünfläche vorschlagen.
             </p>
             <br></br>
-            <a href="pflanzenapp/public/images/dahlien.png"></a>
         </div>
     );
 };
 
-export default Page;
+export default JetztStarten;

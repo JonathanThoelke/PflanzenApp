@@ -12,12 +12,12 @@ const SidebarButton: React.FC = () => {
         foldOut(!isFoldedOut);
         var targetElement = document.getElementById('sidebar');
         if(targetElement != null){
-            if (targetElement.classList.contains('-left-80')) {
-                targetElement.classList.remove('-left-80');
+            if (targetElement.classList.contains('-left-96')) {
+                targetElement.classList.remove('-left-96');
                 targetElement.classList.add('left-0');
             } else {
                 targetElement.classList.remove('left-0');
-                targetElement.classList.add('-left-80');
+                targetElement.classList.add('-left-96');
             }
         }
     };

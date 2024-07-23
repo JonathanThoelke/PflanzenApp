@@ -37,7 +37,7 @@ export default function RootLayout({
               
             </div>*/}
           </header>
-          <nav id="sidebar" className="bg-white-500 text-black p-4 flex justify-between items-center z-10 fixed top-16 transition-left ease-in-out duration-700 -left-80">
+          <nav id="sidebar" className="bg-white-500 text-black p-4 flex justify-between items-center z-10 fixed top-16 transition-left ease-in-out duration-700 -left-96">
             <Sidebar/>
           </nav>
           <main className="flex-grow">{children}</main>

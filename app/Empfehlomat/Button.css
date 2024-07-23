@@ -4,8 +4,8 @@
 }
 
 .start-button {
-    background-color: olive;
-    color: white;
+    background-color: lightgreen;
+    color: black;
     font-size: 16px;
     padding: 10px 20px;
     border: none;
@@ -13,6 +13,13 @@
     cursor: pointer;
 }
 
+.button {
+    background-color: lightgreen;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
 .button:hover {
-    background-color: darkolivegreen;
+    background-color: green;
+    color: white;
 }
