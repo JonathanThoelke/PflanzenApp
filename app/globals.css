@@ -84,7 +84,7 @@ main {
 }
 
 .start-button {
-  background-color: lightgreen;
+  background-color: rgb(144, 173, 151);
   color: black;
   font-size: 16px;
   padding: 10px 20px;
@@ -94,16 +94,25 @@ main {
 }
 
 .button {
-  background-color: lightgreen;
-  margin-right: 10px;
+  background-color: rgb(119, 143, 124);
+  color: white;
+  margin: 5px;
   border-radius: 5px;
+  padding: 6px;
 }
 
 .button:hover {
-  background-color: green;
-  color: white;
+  background-color: rgb(185, 223, 194);
+  color: black;
 }
 
+.frage-box.active {
+  display: block;
+}
+
+.frage-box {
+  display: none;
+}
 
 
 
