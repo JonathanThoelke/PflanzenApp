@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import "./globals.css";
-import { CartProvider } from "./context/CartContext";
 import Searchbar from "./components/Searchbar";
-import Sidebar from "./menü/sidebar";
 import SidebarButton from "./components/SidebarButton";
+import { CartProvider } from "./context/CartContext";
+import "./globals.css";
+import Sidebar from "./menü/sidebar";
 
 export const metadata: Metadata = {
   title: "Pflanzen-App",
@@ -22,20 +22,18 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <CartProvider>
           <header className="p-4 flex flex-col md:flex-row items-center justify-between bg-yellow-400 z-50 sticky top-0">
-            <div className="flex items-center w-full md:w-auto">
+            <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-start">
               <SidebarButton/>
               <Link href="/">
                 <img src="/Logo.png" className="w-10 h-10" alt="Logo" />
               </Link>
+            </div>
+            <div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
               <Searchbar/>
               <div className="flex items-center bg-black p-3 text-white rounded h-10">
                 <Link href="/Warenkorb">Warenkorb</Link>
               </div>
             </div>
-            {/*<div className="flex items-center gap-4 mt-4 md:mt-0 w-full md:w-auto justify-end">
-              
-              
-            </div>*/}
           </header>
           <nav id="sidebar" className="bg-white-500 text-black p-4 flex justify-between items-center z-10 fixed top-16 transition-left ease-in-out duration-700 -left-96">
             <Sidebar/>
