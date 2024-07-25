@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Für Navigation
-import Button from './Button';
+import { useState } from 'react';
 import plantsData from "../../data/plants.json";
+import Button from './Button';
 
 const Page = () => {
     const router = useRouter(); // Router-Instanz für Navigation
@@ -48,7 +48,18 @@ const Page = () => {
         {
             queryString += `blüte=${bloom}&`
         }
-        router.push(queryString);
+        const examplePlants = plantsData.filter(plant => 
+            (loc ? plant.kategorien.includes(loc) : true) &&
+            (height ? plant.wuchshöhe <= parseInt(height) : true) &&
+            (light ? plant.lichtbedarf === parseInt(light) : true) &&
+            (bloom ? plant.bluetezeit.includes(parseInt(bloom)) : true)
+        );
+
+        if (examplePlants.length > 0) {
+            router.push(queryString);
+        } else {
+            alert('Keine Pflanzen gefunden, die Ihren Kriterien entsprechen.');
+        }
     };
     
     return (
