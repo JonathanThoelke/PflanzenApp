@@ -12,7 +12,7 @@ const Searchbar: React.FC = () => {
     };
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        router.push('/Pflanzen?name='+inputValue);
+        router.push(`/Pflanzen?and=false&name=${inputValue}&nameL=${inputValue}&desc=${inputValue}`);
     };
 
     return (

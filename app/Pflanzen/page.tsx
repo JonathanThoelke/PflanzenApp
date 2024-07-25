@@ -14,15 +14,15 @@ const Pflanzen: React.FC = () => {
     //mit z.B. '&haustier=false' für Suchbedingungen für nicht-Textbasierte Suche
     //oder Suche nach 'NameDE', 'NameLatein' etc könnten separiert werden.
     
-    let exclusive = (searchParams.get('exc') !== 'false');
+    let exclusive = (searchParams.get('and') !== 'false');
     let nameDE = searchParams.get('name');
     let nameLT = searchParams.get('nameL');
     let desc = searchParams.get('desc');
     let category = searchParams.get('cat');
     let height = searchParams.get('h');
     let light = searchParams.get('light');
-    let pet = searchParams.get('pet');
-    let bloom = searchParams.get('bloom');
+    //let pet = searchParams.get('pet');
+    let bloom = searchParams.get('blüte');
 
     useEffect(() => {
         let filteredList = new Array();
@@ -158,11 +158,6 @@ const Pflanzen: React.FC = () => {
     return (
         <div className="p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                {plants.map((plant) => (
-                    <div key={plant.ID} className="flex justify-center">
-                        <PlantCard plant={plant} />
-                    </div>
-                ))}
                 {plants.map((plant) => (
                     <div key={plant.ID} className="flex justify-center">
                         <PlantCard plant={plant} />

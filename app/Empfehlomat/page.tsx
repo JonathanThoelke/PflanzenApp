@@ -29,7 +29,7 @@ const Page = () => {
 
     // Funktion, die bei einem Button-Klick ausgeführt wird
     const handleSubmit = () => {
-        let queryString = '/Pflanzen?exc=true&';
+        let queryString = '/Pflanzen?';
         
         if(loc != null)
         {
@@ -46,7 +46,7 @@ const Page = () => {
         }
         if(bloom != null)
         {
-            queryString += `bloom=${bloom}&`
+            queryString += `blüte=${bloom}&`
         }
         router.push(queryString);
     };
