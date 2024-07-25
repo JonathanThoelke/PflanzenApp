@@ -58,16 +58,17 @@ const Page = () => {
         if (examplePlants.length > 0) {
             router.push(queryString);
         } else {
-            alert('Keine Pflanzen gefunden, die Ihren Kriterien entsprechen.');
+            alert('Keine Pflanzen gefunden, die zu den Kriterien passen.');
         }
     };
     
     return (
         <div className="p-4 text-center">
-            {/* Rendering der Fragen-Komponenten */}
+            <div id="matText">Beantworten Sie die folgenden 5 Fragen und lassen sich in wenigen Klicks durch unsere Vorschläge zur passenden Pflanze inspirieren.</div>
+            <br></br>
             <div id="q0" className="frage-box active">
-                <h3>Frage 1</h3>
-                <p>
+                <p className="fragenNr">Frage 1</p>
+                <p className="frage">
                     Wollen sie eine Pflanze für drinnen oder draußen?
                 </p>
                 <Button label={'drinnen'} onClick={()=> handleButton(0, 'Zimmerpflanze')} />
@@ -75,8 +76,8 @@ const Page = () => {
                 <Button label={'egal'}    onClick={()=> handleButton(0, null)} />
             </div>
             <div id="q1" className="frage-box">
-                <h3>Frage 2</h3>
-                <p>
+                <p className="fragenNr">Frage 2</p>
+                <p className="frage">
                     Welche Höhe darf Ihre Pflanze erreichen?
                 </p>
                 <Button label={'bis 30cm'} onClick={()  => handleButton(1, '30')} />
@@ -86,8 +87,8 @@ const Page = () => {
                 <Button label={'bis 110cm'} onClick={() => handleButton(1, '110')} />
             </div>
             <div id="q2" className="frage-box">
-                <h3>Frage 3</h3>
-                <p>
+                <p className="fragenNr">Frage 3</p>
+                <p className="frage">
                     Welchen Standort haben sie zur Verfügung?
                 </p>
                 <Button label={'Sonne'}        onClick={() => handleButton(2, '3')} />
@@ -108,8 +109,8 @@ const Page = () => {
                 </p>
             </div>
             <div id="q3" className="frage-box">
-                <h3>Frage 4</h3>
-                <p>
+                <p className="fragenNr">Frage 4</p>
+                <p className="frage">
                     Zu welcher Jahreszeit soll die Pflanze blühen?
                 </p>
                 <Button label={'Frühling'} onClick={() => handleButton(3, '4')} />
@@ -124,7 +125,7 @@ const Page = () => {
             <Frage5 />*/}
             
             {/* Button zum Auslösen der Navigation */}
-            <Button label="Klick mich" onClick={handleSubmit} />
+            <Button label="Ergebnisse anzeigen" onClick={handleSubmit} />
             <br></br>
             {/*<img className="w-full object-cover h-48" src={plantsData.find((item) => item.ID === (Math.floor(Math.random()*(plantsData.length))+1))?.imagePath} />*/}
         </div>

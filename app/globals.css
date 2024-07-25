@@ -114,9 +114,27 @@ main {
   display: none;
 }
 
+.fragenNr,
+.frage,
+#matText {
+  margin: 0 auto;
+  text-align: left;
+}
 
+.fragenNr {
+  background-color: rgb(119, 143, 124);
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline-flex;
+  padding: 5px 10px;
+}
 
-
+.frage {
+  font-size: 18px;
+  word-wrap: break-word;
+  padding: 10px 0px;
+}
 
 
 
