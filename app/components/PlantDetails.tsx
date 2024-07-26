@@ -31,7 +31,7 @@ const PlantCard: React.FC<PlantCardProps> = ({ plant }) => {
         <p className="text-gray-700 text-base">{plant.beschreibung}</p>
       </div>
       <div className="px-6 pt-4 pb-4">
-        <AddToCart />
+        <AddToCart/>
       </div>
     </div>
   );

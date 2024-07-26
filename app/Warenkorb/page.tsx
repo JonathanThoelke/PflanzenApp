@@ -178,7 +178,7 @@ const Cart = () => {
                 onClick={handlePlaceOrder}
                 className="mt-4 bg-[#90AD97] hover:bg-[#dfe8e1] text-white font-bold py-2 px-4 rounded transition duration-200"
               >
-                Bestellung aufgeben
+                Kauf abschliesßen
               </button>
             </div>
           </div>
