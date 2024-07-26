@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import "./Button";
 
 const Page = () => {
@@ -20,22 +19,21 @@ const Page = () => {
                     Frage 1
                 </button>
                 <p>
-                    Welchen Standort haben Sie zur 
-                    Verfügung?
+                    Wie sonnig ist der Standort der Pflanze?
                 </p>
                 <div className="button-container">
                     <button className="button" onClick={() => handleStart()}>
-                        Sonne
+                        vollsonnig
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        Halbschatten
+                        halbschattig
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        Schatten
+                        schattig
                     </button>
                     <br></br>
                     <p>
-                        Sonnig (vollsonnig): Ein Bereich ist sonnig, wenn von
+                        Sollsonnig: Ein Bereich ist sonnig, wenn von
                          etwa 11 Uhr bis 17 Uhr direktes Sonnenlicht darauf
                          fällt. Vollsonnige Bereiche erhalten den ganzen Tag 
                          über Sonne und eignen sich gut für Pflanze wie
@@ -43,7 +41,7 @@ const Page = () => {
                          </p>
                          <br></br>
                          <p>
-                            Halbschatten: Ein halbschattiger Bereich erhält etwa
+                            Halbschattig: Ein halbschattiger Bereich erhält etwa
                             4 Stunden direktes Sonnenlicht pro Tag, während
                             der Rest der Zeit im Schatten liegt. Morgensonne
                             wird von Halbschattenpflanzen bevorzugt, da die 

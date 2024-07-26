@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import "./Button";
 
 const Page = () => {
@@ -20,25 +19,15 @@ const Page = () => {
                     Frage 5
                 </button>
                 <p>
-                   Darf Ihre Pflanze einen starken Duft 
-                   verströmen?
+                    Soll die Pflanze haustiergeeignet sein?
                 </p>
                 <div className="button-container">
                     <button className="button" onClick={() => handleStart()}>
-                        ja
+                        Ja
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        nein
+                        Egal
                     </button>
-                    <button className="button" onClick={() => handleStart()}>
-                        Nicht relevant
-                    </button>
-                    <br></br>
-                    <p>
-                        Es gibt tolle duftende Blume oder Kräuter.
-                        Zum Beispiel: Rosen, Colorkraut, Zironenverbene 
-                        oder Basilikum.
-                    </p>
                     <br></br>
                     <a href="pflanzenapp/public/images/rose.jpg"></a>
                         </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import "./Button";
 
 const Page = () => {
@@ -20,18 +19,17 @@ const Page = () => {
                     Frage 2
                 </button>
                 <p>
-                   Möchten Sie eine Pflanze, die große
-                   auffällige Blüten ausbildet?
+                   Wie oft können Sie die Pflanze gießen?
                 </p>
                 <div className="button-container">
                     <button className="button" onClick={() => handleStart()}>
-                        ja
+                        täglich
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        nein
+                        wöchentlich
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        Nicht relevant
+                        seltener
                     </button>
                     <br></br>
                     <a href="pflanzenapp/public/images/dahlien.png"></a>

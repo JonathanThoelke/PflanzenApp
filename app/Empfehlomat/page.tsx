@@ -7,23 +7,27 @@ import Button from './Button';
 const Page = () => {
     const router = useRouter(); // Router-Instanz für Navigation
 
-    const [loc, setLoc] = useState<string | null>(null);
+    const [water, setWater] = useState<string | null>(null);
     const [height, setHeight] = useState<string | null>(null);
     const [light, setLight] = useState<string | null>(null);
     const [bloom, setBloom] = useState<string | null>(null);
+    const [pet, setPet] = useState<boolean | null>(null);
 
-    const handleButton = (id:number, value:string | null) => {
+    const handleButton = (id:number, value:string | boolean | null) => {
         console.log(`assigning "${value}" to ${id}`)
         switch(id){
-            case 0: setLoc(value); break;
-            case 1: setHeight(value); break;
-            case 2: setLight(value); break;
-            case 3: setBloom(value); break;
+            case 0: setLight(value as string); break;
+            case 1: setWater(value as string); break;
+            case 2: setHeight(value as string); break;
+            case 3: setBloom(value as string); break;
+            case 4: setPet(value as boolean); break;
         }
         
         if(id < 4) {
             document.getElementById(`q${id}`)?.classList.remove('active');
             document.getElementById(`q${id+1}`)?.classList.add('active');
+        } else {
+            handleSubmit();
         }
     }
 
@@ -31,10 +35,10 @@ const Page = () => {
     const handleSubmit = () => {
         let queryString = '/Pflanzen?';
         
-        if(loc != null)
+        if(water != null)
         {
-            console.log(loc)
-            queryString += `cat=${loc}&`
+            console.log(water)
+            queryString += `water=${water}&`
         }
         if(height != null)
         {
@@ -48,11 +52,37 @@ const Page = () => {
         {
             queryString += `blüte=${bloom}&`
         }
+        if(pet != null)
+        {
+            queryString += `pet=${pet}&`
+        }
+        const bloomMonths = {
+            'Frühling': [3, 4, 5],
+            'Sommer': [6, 7, 8],
+            'Herbst': [9, 10, 11],
+            'Winter': [12, 1, 2]
+        };
+        const lightAmount = {
+            'vollsonnig': [8, 9, 10],
+            'halbschattig': [4, 5, 6, 7],
+            'schattig': [1, 2, 3]
+        }
+        const heightRange = {
+            'niedrig': (height: number) => height < 30,
+            'mittel': (height: number) => height >= 30 && height <= 60,
+            'hoch': (height: number) => height > 60
+        }
+        const waterAmount = {
+            'täglich': (water: number) => water > 1,
+            'wöchentlich': (water: number) => water === 1,
+            'seltener': (water: number) => water < 1
+        };
         const examplePlants = plantsData.filter(plant => 
-            (loc ? plant.kategorien.includes(loc) : true) &&
-            (height ? plant.wuchshöhe <= parseInt(height) : true) &&
-            (light ? plant.lichtbedarf === parseInt(light) : true) &&
-            (bloom ? plant.bluetezeit.includes(parseInt(bloom)) : true)
+            (water ? waterAmount[water as keyof typeof waterAmount](plant.gießenProWoche) : true) &&
+            (height ? heightRange[height as keyof typeof heightRange](plant.wuchshöhe) : true) &&
+            (light ? lightAmount[light as keyof typeof lightAmount].includes(plant.lichtbedarf) : true) &&
+            (bloom === 'Keine Blüte' ? plant.bluetezeit.length === 0 : bloom ? bloomMonths[bloom as keyof typeof bloomMonths].some(month => plant.bluetezeit.includes(month)) : true) &&
+            (pet !== null ? plant.haustiergeeigent === pet : true)
         );
 
         if (examplePlants.length > 0) {
@@ -69,73 +99,79 @@ const Page = () => {
             <div id="q0" className="frage-box active">
                 <p className="fragenNr">Frage 1</p>
                 <p className="frage">
-                    Wollen sie eine Pflanze für drinnen oder draußen?
+                    Wie sonnig ist der Standort der Pflanze?
                 </p>
                 <div id="answers">
-                <Button label={'drinnen'} onClick={()=> handleButton(0, 'Zimmerpflanze')} />
-                <Button label={'draußen'} onClick={()=> handleButton(0, 'Gartenpflanze')} />
-                <Button label={'egal'}    onClick={()=> handleButton(0, null)} />
+                <Button label={'vollsonnig'} onClick={()=> handleButton(0, 'vollsonnig')} />
+                <Button label={'halbschattig'} onClick={()=> handleButton(0, 'halbschattig')} />
+                <Button label={'schattig'}    onClick={()=> handleButton(0, 'schattig')} />
                 </div>
+                <br></br>
+                    <p>
+                        Sollsonnig: Ein Bereich ist sonnig, wenn von
+                         etwa 11 Uhr bis 17 Uhr direktes Sonnenlicht darauf
+                         fällt. Vollsonnige Bereiche erhalten den ganzen Tag 
+                         über Sonne und eignen sich gut für Pflanze wie
+                         Rosen, Lavendel und Sonnenblumen.
+                         </p>
+                         <br></br>
+                         <p>
+                            Halbschattig: Ein halbschattiger Bereich erhält etwa
+                            4 Stunden direktes Sonnenlicht pro Tag, während
+                            der Rest der Zeit im Schatten liegt. Morgensonne
+                            wird von Halbschattenpflanzen bevorzugt, da die 
+                            Luftfeutigkeit die Wärme abschwächt.
+                         </p>
+                         <br></br>
             </div>
             <div id="q1" className="frage-box">
                 <p className="fragenNr">Frage 2</p>
                 <p className="frage">
-                    Welche Höhe darf Ihre Pflanze erreichen?
+                    Wie oft können Sie die Pflanze gießen?
                 </p>
                 <div id="answers">
-                <Button label={'bis 30cm'} onClick={()  => handleButton(1, '30')} />
-                <Button label={'bis 50cm'} onClick={()  => handleButton(1, '50')} />
-                <Button label={'bis 70cm'} onClick={()  => handleButton(1, '70')} />
-                <Button label={'bis 90cm'} onClick={()  => handleButton(1, '90')} />
-                <Button label={'bis 110cm'} onClick={() => handleButton(1, '110')} />
+                <Button label={'täglich'} onClick={()  => handleButton(1, 'täglich')} />
+                <Button label={'wöchentlich'} onClick={()  => handleButton(1, 'wöchentlich')} />
+                <Button label={'seltener'} onClick={()  => handleButton(1, 'seltener')} />
                 </div>
             </div>
             <div id="q2" className="frage-box">
                 <p className="fragenNr">Frage 3</p>
                 <p className="frage">
-                    Welchen Standort haben sie zur Verfügung?
+                    Wie hoch soll die Pflanze werden?
                 </p>
                 <div id="answers">
-                <Button label={'Sonne'}        onClick={() => handleButton(2, '3')} />
-                <Button label={'Halbschatten'} onClick={() => handleButton(2, '2')} />
-                <Button label={'Schatten'}     onClick={() => handleButton(2, '1')} />
-                <Button label={'weiß nicht'}   onClick={() => handleButton(2, null)}/>
+                <Button label={'niedrig'}        onClick={() => handleButton(2, 'niedrig')} />
+                <Button label={'mittel'} onClick={() => handleButton(2, 'mittel')} />
+                <Button label={'hoch'}     onClick={() => handleButton(2, 'hoch')} />
                 </div>
-                <p>
-                    Sonnig (vollsonnig): Ein Bereich ist sonnig, wenn von etwa 11
-                    Uhr bis 17 Uhr direktes Sonnenlicht darauf fällt. Vollsonnige
-                    Bereiche erhalten den ganzen Tag über Sonne und eignen sich gut
-                    für Pflanzen wie Rosen, Lavendel und Sonnenblumen.
-                </p>
-                <p>
-                    Halbschatten: Ein halbschattiger Bereich erhält etwa 4 Stunden
-                    direktes Sonnenlicht pro Tag, während der Rest der Zeit im Schatten
-                    liegt. Morgensonne wird von Halbschattenpflanzen bevorzugt, da die
-                    Luftfeuchtigkeit die Wärme abschwächt.
-                </p>
             </div>
             <div id="q3" className="frage-box">
                 <p className="fragenNr">Frage 4</p>
                 <p className="frage">
-                    Zu welcher Jahreszeit soll die Pflanze blühen?
+                    Wann soll die Pflanze blühen?
                 </p>
                 <div id="answers">
-                <Button label={'Frühling'} onClick={() => handleButton(3, '4')} />
-                <Button label={'Sommer'} onClick={() => handleButton(3, '7')} />
-                <Button label={'Herbst'} onClick={() => handleButton(3, '10')} />
+                <Button label={'Frühling'} onClick={() => handleButton(3, 'Frühling')} />
+                <Button label={'Sommer'} onClick={() => handleButton(3, 'Sommer')} />
+                <Button label={'Herbst'} onClick={() => handleButton(3, 'Herbst')} />
+                <Button label={'Winter'} onClick={() => handleButton(3, 'Winter')} />
+                <Button label={'Keine Blüte'} onClick={() => handleButton(3, 'Keine Blüte')} />
+                </div>
+            </div>
+            <div id="q4" className="frage-box">
+                <p className="fragenNr">Frage 5</p>
+                <p className="frage">
+                    Soll die Pflanze haustiergeeignet sein?
+                </p>
+                <div id="answers">
+                <Button label={'Ja'} onClick={() => handleButton(4, true)} />
+                <Button label={'Egal'} onClick={() => handleButton(4, null)} />
                 </div>
             </div>
             <br></br>
-            {/*<Frage1 />
-            <Frage2 />
-            <Frage3 />
-            <Frage4 />
-            <Frage5 />*/}
-            
-            {/* Button zum Auslösen der Navigation */}
             <Button label="Ergebnisse anzeigen" onClick={handleSubmit} />
             <br></br>
-            {/*<img className="w-full object-cover h-48" src={plantsData.find((item) => item.ID === (Math.floor(Math.random()*(plantsData.length))+1))?.imagePath} />*/}
         </div>
     );
 }

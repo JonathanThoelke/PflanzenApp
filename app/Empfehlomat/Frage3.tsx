@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import "./Button";
 
 const Page = () => {
@@ -20,17 +19,17 @@ const Page = () => {
                     Frage 3
                 </button>
                 <p>
-                   Welche Höhe darf Ihre Pflanze erreichen?
+                    Wie hoch soll die Pflanze werden?
                 </p>
                 <div className="button-container">
                     <button className="button" onClick={() => handleStart()}>
-                        bis 20cm
+                        niedrig
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        60-100cm
+                        mittel
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        Nicht relevant
+                        hoch
                     </button>
                     <br></br>
                     <a href="pflanzenapp/public/images/dahlien.png"></a>

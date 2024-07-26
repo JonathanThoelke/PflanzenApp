@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import "./Button";
 
 const Page = () => {
@@ -20,25 +19,22 @@ const Page = () => {
                     Frage 4
                 </button>
                 <p>
-                   Bevorzugen Sie Pflanzen, die Insekten 
-                   Nahrung bieten können?
+                   Wann soll die Pflanze blühen?
                 </p>
                 <div className="button-container">
                     <button className="button" onClick={() => handleStart()}>
-                        ja
+                        Frühling
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        nein
+                        Sommer
                     </button>
                     <button className="button" onClick={() => handleStart()}>
-                        Nicht relevant
+                        Herbst
+                    </button>
+                    <button className="button" onClick={() => handleStart()}>
+                        Winter
                     </button>
                     <br></br>
-                    <p>
-                        Besonders Blüten, die speziell darauf gezüchtet 
-                        wurden gefüllte Blüten zu bilden, können Insekten
-                        oft keine Nahrung zur Verfügung stellen.
-                    </p>
                     <a href="pflanzenapp/public/images/basilikum.png"></a>
                     </div>
                     </div>
