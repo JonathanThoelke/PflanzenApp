@@ -71,30 +71,36 @@ const Page = () => {
                 <p className="frage">
                     Wollen sie eine Pflanze für drinnen oder draußen?
                 </p>
+                <div id="answers">
                 <Button label={'drinnen'} onClick={()=> handleButton(0, 'Zimmerpflanze')} />
                 <Button label={'draußen'} onClick={()=> handleButton(0, 'Gartenpflanze')} />
                 <Button label={'egal'}    onClick={()=> handleButton(0, null)} />
+                </div>
             </div>
             <div id="q1" className="frage-box">
                 <p className="fragenNr">Frage 2</p>
                 <p className="frage">
                     Welche Höhe darf Ihre Pflanze erreichen?
                 </p>
+                <div id="answers">
                 <Button label={'bis 30cm'} onClick={()  => handleButton(1, '30')} />
                 <Button label={'bis 50cm'} onClick={()  => handleButton(1, '50')} />
                 <Button label={'bis 70cm'} onClick={()  => handleButton(1, '70')} />
                 <Button label={'bis 90cm'} onClick={()  => handleButton(1, '90')} />
                 <Button label={'bis 110cm'} onClick={() => handleButton(1, '110')} />
+                </div>
             </div>
             <div id="q2" className="frage-box">
                 <p className="fragenNr">Frage 3</p>
                 <p className="frage">
                     Welchen Standort haben sie zur Verfügung?
                 </p>
+                <div id="answers">
                 <Button label={'Sonne'}        onClick={() => handleButton(2, '3')} />
                 <Button label={'Halbschatten'} onClick={() => handleButton(2, '2')} />
                 <Button label={'Schatten'}     onClick={() => handleButton(2, '1')} />
                 <Button label={'weiß nicht'}   onClick={() => handleButton(2, null)}/>
+                </div>
                 <p>
                     Sonnig (vollsonnig): Ein Bereich ist sonnig, wenn von etwa 11
                     Uhr bis 17 Uhr direktes Sonnenlicht darauf fällt. Vollsonnige
@@ -113,9 +119,11 @@ const Page = () => {
                 <p className="frage">
                     Zu welcher Jahreszeit soll die Pflanze blühen?
                 </p>
+                <div id="answers">
                 <Button label={'Frühling'} onClick={() => handleButton(3, '4')} />
                 <Button label={'Sommer'} onClick={() => handleButton(3, '7')} />
                 <Button label={'Herbst'} onClick={() => handleButton(3, '10')} />
+                </div>
             </div>
             <br></br>
             {/*<Frage1 />

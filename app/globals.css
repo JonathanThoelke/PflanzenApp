@@ -110,14 +110,19 @@ main {
   display: block;
 }
 
+#answers {
+  text-align: center;
+}
+
 .frage-box {
   display: none;
 }
 
 .fragenNr,
-.frage,
-#matText {
+#matText,
+.frage-box {
   margin: 0 auto;
+  max-width: 70%;
   text-align: left;
 }
 
@@ -126,8 +131,9 @@ main {
   color: white;
   border-radius: 5px;
   font-size: 20px;
-  display: inline-flex;
   padding: 5px 10px;
+  display: inline-block;
+  text-align: left;
 }
 
 .frage {
