@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   const paymentDueDate = new Date(currentDateTime);
   paymentDueDate.setDate(paymentDueDate.getDate() + 30);
 
-  const formattedDateTime = format(currentDateTime, 'dd MM yyyy HH:mm:ss.SSS');
+  //const formattedDateTime = format(currentDateTime, 'dd MM yyyy HH:mm:ss.SSS');
   const formattedDueDate = format(paymentDueDate, 'dd.MM.yyyy');
 
   const iban = process.env.BANK_IBAN;

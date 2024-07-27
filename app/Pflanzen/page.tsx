@@ -1,10 +1,10 @@
 'use client'
 //SearchComponent
-import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { Plant as PlantType } from "../interfaces";
-import PlantCard from "../components/PlantCard";
+import React, { useEffect, useState } from "react";
 import plantsData from "../../data/plants.json";
+import PlantCard from "../components/PlantCard";
+import { Plant as PlantType } from "../interfaces";
 
 
 const Pflanzen: React.FC = () => {
@@ -21,59 +21,59 @@ const Pflanzen: React.FC = () => {
     let category = searchParams.get('cat');
     let height = searchParams.get('h');
     let light = searchParams.get('light');
-    //let pet = searchParams.get('pet');
+    let pet = searchParams.get('pet');
     let bloom = searchParams.get('blüte');
+    let water = searchParams.get('water');
 
     useEffect(() => {
-        let filteredList = new Array();
+        let filteredList: PlantType[] = exclusive ? plants : [];
         //Je nachdem, ob 'OR' oder 'AND' gesucht werden soll muss das Array entsprechend
         //leer oder voll initialisiert werden
-        if(exclusive) {
-            filteredList = plants
-        }
+        const lowerCase = (str: string | null) => str ? str.toLowerCase() : '';
+
         //Hier die Funktionen der Filter implementieren
         if(nameDE != null){
-            nameDE = nameDE.toLowerCase();
+            const lowerCaseNameDE = lowerCase(nameDE);
             if(exclusive)
             {
                 filteredList = filteredList.filter(item => 
-                    item.deutscherName.toLowerCase().includes(nameDE));
+                    item.deutscherName.toLowerCase().includes(lowerCaseNameDE));
             }
             else
             {
-                let addendum = plants.filter(item =>
-                    item.deutscherName.toLowerCase().includes(nameDE)
+                const addendum = plants.filter(item =>
+                    item.deutscherName.toLowerCase().includes(lowerCaseNameDE)
                 );
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
         if(nameLT != null){
-            nameLT = nameLT.toLowerCase();
+            const lowerCaseNameLT = lowerCase(nameLT);
             if(exclusive)
             {
                 filteredList = filteredList.filter(item => 
-                    item.lateinischerName.toLowerCase().includes(nameLT));
+                    item.lateinischerName.toLowerCase().includes(lowerCaseNameLT));
             }
             else
             {
-                let addendum = plants.filter(item =>
-                    item.lateinischerName.toLowerCase().includes(nameLT)
+                const addendum = plants.filter(item =>
+                    item.lateinischerName.toLowerCase().includes(lowerCaseNameLT)
                 );
                 console.log(addendum.length);
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
         if(desc != null){
-            desc = desc.toLowerCase();
+            const lowerCaseDesc = lowerCase(desc);
             if(exclusive)
             {
                 filteredList = filteredList.filter(item => 
-                    item.beschreibung.toLowerCase().includes(desc));
+                    item.beschreibung.toLowerCase().includes(lowerCaseDesc));
             }
             else
             {
-                let addendum = plants.filter(item =>
-                    item.beschreibung.toLowerCase().includes(desc)
+                const addendum = plants.filter(item =>
+                    item.beschreibung.toLowerCase().includes(lowerCaseDesc)
                 );
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
@@ -86,74 +86,87 @@ const Pflanzen: React.FC = () => {
             }
             else
             {
-                let addendum = plants.filter(item =>
+                const addendum = plants.filter(item =>
                     item.kategorien.includes(category)
                 );
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
         if(height != null){
-            let heightNum = parseInt(height);
-            if(exclusive)
-            {
-                filteredList = filteredList.filter(item => 
-                    item.wuchshöhe <= heightNum);
-            }
-            else
-            {
-                let addendum = plants.filter(item =>
+            const heightNum = parseInt(height);
+            if (!isNaN(heightNum)) {
+                if (exclusive) {
+                    filteredList = filteredList.filter(item => 
+                        item.wuchshöhe <= heightNum);
+                } else {
+                    const addendum = plants.filter(item =>
                     item.wuchshöhe <= heightNum
                 );
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
+                }
             }
         }
         if(light != null){
-            let lightNum = parseInt(light);
-            if(exclusive)
-            {
-                filteredList = filteredList.filter(item => 
-                    item.lichtbedarf <= lightNum);
+            const lightNum = parseInt(light);
+            if (!isNaN(lightNum)) {
+                if(exclusive)
+                {
+                    filteredList = filteredList.filter(item => 
+                        item.lichtbedarf <= lightNum);
+                }
+                else
+                {
+                    const addendum = plants.filter(item =>
+                        item.lichtbedarf <= lightNum
+                    );
+                    filteredList = Array.from(new Set(filteredList.concat(addendum)));
+                }
             }
-            else
-            {
-                let addendum = plants.filter(item =>
-                    item.lichtbedarf <= lightNum
-                );
+        }
+        if (water) {
+            const validWaterValues = ["täglich", "wöchentlich", "seltener"];
+            if (validWaterValues.includes(water)) {
+                if (exclusive) {
+                    filteredList = filteredList.filter(item => 
+                        item.gießenProWoche === validWaterValues.indexOf(water));
+                } else {
+                    const addendum = plants.filter(item => 
+                        item.gießenProWoche === validWaterValues.indexOf(water));
+                    filteredList = Array.from(new Set(filteredList.concat(addendum)));
+                }
+            }
+        }
+        if (pet) {
+            const petBoolean = pet === "true";
+            if (exclusive) {
+                filteredList = filteredList.filter(item => 
+                    item.haustiergeeigent === petBoolean);
+            } else {
+                const addendum = plants.filter(item => 
+                    item.haustiergeeigent === petBoolean);
                 filteredList = Array.from(new Set(filteredList.concat(addendum)));
             }
         }
-        /*if(pet != null){
-            if(exclusive)
-            {
-                filteredList = filteredList.filter(item => 
-                    item.haustiergeeigent == pet);
-            }
-            else
-            {
-                let addendum = plants.filter(item =>
-                    item.haustiergeeigent == pet
-                );
-                filteredList = Array.from(new Set(filteredList.concat(addendum)));
-            }
-        }*/
         if(bloom != null){
-            let bloomNum = parseInt(bloom);
-            if(exclusive)
-            {
-                filteredList = filteredList.filter(item => 
-                    item.bluetezeit == null || item.bluetezeit.includes(bloomNum));
-            }
-            else
-            {
-                let addendum = plants.filter(item =>
-                    item.bluetezeit == null || item.bluetezeit.includes(bloomNum)
-                );
-                filteredList = Array.from(new Set(filteredList.concat(addendum)));
+            const bloomNum = parseInt(bloom);
+            if (!isNaN(bloomNum)) {
+                if(exclusive)
+                {
+                    filteredList = filteredList.filter(item => 
+                        item.bluetezeit == null || item.bluetezeit.includes(bloomNum));
+                }
+                else
+                {
+                    const addendum = plants.filter(item =>
+                        item.bluetezeit == null || item.bluetezeit.includes(bloomNum)
+                    );
+                    filteredList = Array.from(new Set(filteredList.concat(addendum)));
+                }
             }
         }
 
         setPlants(filteredList);
-    }, []);
+    }, [searchParams, exclusive, nameDE, nameLT, desc, category, height, light, water, pet, bloom]);
 
     return (
         <div className="p-4">

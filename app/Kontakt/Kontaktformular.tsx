@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -14,14 +15,46 @@ const Kontaktformular = () => {
         message: '',
     });
 
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const handleChange = (e: any) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+
+        let option = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        };
+
+        fetch('/api/emailContact', option)
+            .then(response => {
+                if (response.ok) {
+                    alert('Ihre Nachricht wurde erfolgreich gesendet.');
+                    setFormData({
+                        fullName: '',
+                        company: '',
+                        email: '',
+                        phone: '',
+                        postleitzahl: '',
+                        city: '',
+                        topic: '',
+                        message: '',
+                    });
+                } else {
+                    return response.json().then(err => {
+                        alert(`Fehler: ${err.message}`);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                alert('Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten.');
+            });
     };
 
     return (

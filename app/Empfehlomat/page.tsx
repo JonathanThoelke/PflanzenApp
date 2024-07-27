@@ -35,62 +35,59 @@ const Page = () => {
     const handleSubmit = () => {
         let queryString = '/Pflanzen?';
         
-        if(water != null)
-        {
-            console.log(water)
-            queryString += `water=${water}&`
+        if (water != null) {
+            queryString += `water=${water}&`;
         }
-        if(height != null)
-        {
-            queryString += `h=${height}&`
+        if (height != null) {
+            queryString += `h=${height}&`;
         }
-        if(light != null)
-        {
-            queryString += `light=${light}&`
+        if (light != null) {
+            queryString += `light=${light}&`;
         }
-        if(bloom != null)
-        {
-            queryString += `blüte=${bloom}&`
+        if (bloom != null) {
+            queryString += `blüte=${bloom}&`;
         }
-        if(pet != null)
-        {
-            queryString += `pet=${pet}&`
+        if (pet !== null) {
+            queryString += `pet=${pet}&`;
         }
+    
         const bloomMonths = {
             'Frühling': [3, 4, 5],
             'Sommer': [6, 7, 8],
             'Herbst': [9, 10, 11],
-            'Winter': [12, 1, 2]
+            'Winter': [12, 1, 2],
+            'Keine Blüte': []
         };
         const lightAmount = {
-            'vollsonnig': [8, 9, 10],
-            'halbschattig': [4, 5, 6, 7],
-            'schattig': [1, 2, 3]
-        }
+            'vollsonnig': [4],
+            'halbschattig': [2, 3],
+            'schattig': [1]
+        };
         const heightRange = {
             'niedrig': (height: number) => height < 30,
             'mittel': (height: number) => height >= 30 && height <= 60,
             'hoch': (height: number) => height > 60
-        }
+        };
         const waterAmount = {
             'täglich': (water: number) => water > 1,
             'wöchentlich': (water: number) => water === 1,
             'seltener': (water: number) => water < 1
         };
-        const examplePlants = plantsData.filter(plant => 
+    
+        const examplePlants = plantsData.filter(plant =>
             (water ? waterAmount[water as keyof typeof waterAmount](plant.gießenProWoche) : true) &&
             (height ? heightRange[height as keyof typeof heightRange](plant.wuchshöhe) : true) &&
             (light ? lightAmount[light as keyof typeof lightAmount].includes(plant.lichtbedarf) : true) &&
             (bloom === 'Keine Blüte' ? plant.bluetezeit.length === 0 : bloom ? bloomMonths[bloom as keyof typeof bloomMonths].some(month => plant.bluetezeit.includes(month)) : true) &&
             (pet !== null ? plant.haustiergeeigent === pet : true)
         );
-
+    
         if (examplePlants.length > 0) {
             router.push(queryString);
         } else {
             alert('Keine Pflanzen gefunden, die zu den Kriterien passen.');
         }
-    };
+    };    
     
     return (
         <div className="p-4 text-center">
